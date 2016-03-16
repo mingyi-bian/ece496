@@ -182,8 +182,11 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
+                            
                             <div id="floorplan" style="border: 2px solid black">
-                                <img src="../img/floor1.png" width="707" height="500">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <embed class="embed-responsive-item" src="../img/floor-1.png"></embed>
+                                </div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
@@ -341,17 +344,23 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $("#floor1-img").click(function(){
-            $("#floorplan").html("<img src='../img/floor1.png' width='707' height='500'>");
+            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
+                                    "<embed class='embed-responsive-item' src='../img/floor-1.png'></embed>" +
+                                 "</div>");
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
         });
 
         $("#floor2-img").click(function(){
-            $("#floorplan").html("<img src='../img/floor2.png' width='707' height='500'>");
+            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
+                                    "<embed class='embed-responsive-item' src='../img/floor-2.png'></embed>" +
+                                 "</div>");
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
         });
 
         $("#floor3-img").click(function(){
-            $("#floorplan").html("<img src='../img/floor3.png' width='707' height='500'>");
+            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
+                                    "<embed class='embed-responsive-item' src='../img/floor-3.png'></embed>" +
+                                 "</div>");
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
         });
     });

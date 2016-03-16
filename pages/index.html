@@ -255,18 +255,16 @@
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
+                                        Total Energy
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
+                                        <li><a href="#">Total Energy</a>
                                         </li>
                                         <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
+                                        <li><a href="#">Heating</a>
+                                        </li>
+                                        <li><a href="#">Cooling</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -274,7 +272,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart"></div>
+                            <div id="morris-bar-chart"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -357,6 +355,44 @@
     <script src="../bower_components/raphael/raphael-min.js"></script>
     <script src="../bower_components/morrisjs/morris.min.js"></script>
     <script src="../js/morris-data.js"></script>
+
+    <script>
+        Morris.Bar({
+        element: 'morris-bar-chart',
+        data: [{
+            y: 'Jan',  a: 100, b: 90
+        }, {
+            y: 'Feb',  a: 75,  b: 65
+        }, {
+            y: 'Mar',  a: 50,  b: 40
+        }, {
+            y: 'Apr',  a: 75,  b: 65
+        }, {
+            y: 'May',  a: 50,  b: 40
+        }, {
+            y: 'Jun',  a: 75,  b: 65
+        }, {
+            y: 'Jul',  a: 100, b: 90
+        }, {
+            y: 'Aug',  a: 75,  b: 65
+        }, {
+            y: 'Sep',  a: 50,  b: 40
+        }, {
+            y: 'Oct',  a: 75,  b: 65
+        }, {
+            y: 'Nov',  a: 50,  b: 40
+        }, {
+            y: 'Dec',  a: 75,  b: 65
+        }],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Heating-Electric', 'Heating-Gas','Cooling', 'Other'],
+        barColors: ['#D9534F','#F0AD4E','#337AB7','#5CB85C'], // Red, Yellow, Blue, Green
+        hideHover: 'auto',
+        stacked: true,
+        resize: true
+    });
+    </script>
 
 </body>
 
