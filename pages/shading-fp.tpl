@@ -214,7 +214,8 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
-                                                <input class="form-control" placeholder="Enter Room Number">
+                                                <input id = "RoomTextbox"class="form-control" placeholder="Enter Room Number">
+                                                 <button id="TestButton" type="button" class="btn btn-primary">Test</button>
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -222,10 +223,10 @@
                                             <td>Occupancy</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline1" value="option1" checked>Yes
+                                                <input type="radio" name="optionsRadiosInlineYes" id="optionsRadiosInlineYes" value="option1">Yes
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline2" value="option2">No
+                                                    <input type="radio" name="optionsRadiosInlineNo" id="optionsRadiosInlineNo" value="option2">No
                                                 </label>
                                             </td>
                                         </tr>
@@ -234,10 +235,10 @@
                                             <td>Mode</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline1" value="option1" checked>Manual
+                                                    <input type="radio" name="optionsRadiosInlineMan" id="optionsRadiosInlineMan" value="option1">Manual
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline2" value="option2">Auto
+                                                    <input type="radio" name="optionsRadiosInlineAuto" id="optionsRadiosInlineAuto" value="option2">Auto
                                                 </label>
                                             </td>
                                         </tr>
@@ -255,7 +256,7 @@
                                         <tr>
                                             <td>Temperature</td>
                                             <td>
-                                                <input class="form-control" placeholder="Between 18-23 deg C" type="number" id="replyNumber" min="18" step="0.5" max="23" data-bind="value:replyNumber" />
+                                                <input class="form-control" placeholder="Between 18-23 deg C" type="number" id="temperature" min="18" step="0.5" max="23" data-bind="value:replyNumber" />
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -264,32 +265,32 @@
                                             <td>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option0" checked>0/5 (Open)
+                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/5 (Open)
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">1/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">2/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">3/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">4/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">5/5 (Closed)
+                                                        <input type="radio" name="optionsRadios" id="Tilt5" value="option5">5/5 (Closed)
                                                     </label>
                                                 </div>
                                             </td>
@@ -337,8 +338,11 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+    <!-- Populate Sidebar -->
+    <script src="../js/populateSideBar.js"></script>
+
     <!-- Connecting to JSON file -->
-    <script src="../js/main.js"></script>
+    <!--<script src="../js/main.js"></script> -->
 
     <!-- Floor Plans -->
     <script type="text/javascript">
@@ -363,6 +367,15 @@
                                  "</div>");
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
         });
+
+        $("#TestButton").click(function(){
+            
+            populateSidebar('1','101');
+           
+          
+        });
+
+        
 	});
 	</script>
 

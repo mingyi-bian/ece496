@@ -168,7 +168,6 @@
                                 <table class="table table-striped table-bordered table-hover" id="shading-table">
                                     <thead>
                                         <tr>
-                                            <th>Select</th>
                                             <th>Room</th>
                                             <th>Floor</th>
                                             <th>Facing</th>
@@ -176,11 +175,23 @@
                                             <th>Mode</th>
                                             <th>Alarm Request</th>
                                             <th>Temperature</th>
+                                            <th>Light Level</th>
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id = "tbody">
                                         <tr>
+                                            <td>[]</td> <!--TO-DO: Change to checkbox button-->
+                                            <td>101</td>
+                                            <td>1</td>
+                                            <td>West</td>
+                                            <td>Yes</td>
+                                            <td>Manual</td>
+                                            <td>No</td>
+                                            <td>21</td>
+                                            <td>4</td>
+                                        </tr>
+                                         <tr>
                                             <td>[]</td> <!--TO-DO: Change to checkbox button-->
                                             <td>101</td>
                                             <td>1</td>
@@ -227,6 +238,8 @@
     <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
+    <script src="../js/populateTable.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
@@ -235,12 +248,28 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
+    var t;
     $(document).ready(function() {
-        $('#shading-table').DataTable({
+        t = $('#shading-table').DataTable({
                 responsive: true,
                 //"ajax": "../api/data.txt"
         });
+
+        var a = 101;
+        for (i = 0; i < 25; i++)
+        {
+            addToShadingTable('1',a);
+            a = a + 1;
+        }
+
+       // $('#shading-table tr:last').after('<tr><td>Hello</td><td>Apple></td></tr>');
     });
+
+
+    
+
+
+
     </script>
 
 </body>
