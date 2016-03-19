@@ -217,7 +217,6 @@
                                             <td id="room">Room</td>
                                             <td>
                                                 <input id = "RoomTextbox"class="form-control" placeholder="Enter Room Number">
-                                                 <button id="TestButton" type="button" class="btn btn-primary">Test</button>
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -373,16 +372,7 @@
                                     "<embed class='embed-responsive-item' src='../img/floor-3.png'></embed>" +
                                  "</div>");
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
-        });
-
-        $("#TestButton").click(function(){
-            
-            populateSidebar('1','101');
-           
-          
-        });
-
-        
+        });        
 	});
 	</script>
 

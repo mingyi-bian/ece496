@@ -180,28 +180,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id = "tbody">
-                                        <tr>
-                                            <td>[]</td> <!--TO-DO: Change to checkbox button-->
-                                            <td>101</td>
-                                            <td>1</td>
-                                            <td>West</td>
-                                            <td>Yes</td>
-                                            <td>Manual</td>
-                                            <td>No</td>
-                                            <td>21</td>
-                                            <td>4</td>
-                                        </tr>
-                                         <tr>
-                                            <td>[]</td> <!--TO-DO: Change to checkbox button-->
-                                            <td>101</td>
-                                            <td>1</td>
-                                            <td>West</td>
-                                            <td>Yes</td>
-                                            <td>Manual</td>
-                                            <td>No</td>
-                                            <td>21</td>
-                                            <td>4</td>
-                                        </tr>
+                     
                                     </tbody>
                                 </table>
                             </div>

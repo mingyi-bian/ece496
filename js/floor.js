@@ -7,6 +7,7 @@ var rsr = Raphael('floorplan');
 var floorplan = [];
 
 var rm106 = rsr.rect(18.000006, 560.36218, 130, 90).attr({
+    id: 'rm106',
     y: '560.36218',
     x: '18.000006',
     opacity: '1',
@@ -19,7 +20,7 @@ var rm106 = rsr.rect(18.000006, 560.36218, 130, 90).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm106');
+}).transform("t0,-552.36216").data('id', '106');
 floorplan.push(rm106);
 
 var rm107 = rsr.rect(18.000006, 652.36218, 130, 60).attr({
@@ -35,7 +36,7 @@ var rm107 = rsr.rect(18.000006, 652.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm107');
+}).transform("t0,-552.36216").data('id', '107');
 floorplan.push(rm107);
 
 var rm108 = rsr.rect(18.000011, 714.36218, 130, 60).attr({
@@ -51,7 +52,7 @@ var rm108 = rsr.rect(18.000011, 714.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm108');
+}).transform("t0,-552.36216").data('id', '108');
 floorplan.push(rm108);
 
 var rm109 = rsr.rect(18.000006, 776.36218, 130, 60).attr({
@@ -67,7 +68,7 @@ var rm109 = rsr.rect(18.000006, 776.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm109');
+}).transform("t0,-552.36216").data('id', '109');
 floorplan.push(rm109);
 
 var rm110 = rsr.rect(18.000011, 838.36218, 130, 60).attr({
@@ -83,7 +84,7 @@ var rm110 = rsr.rect(18.000011, 838.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm110');
+}).transform("t0,-552.36216").data('id', '110');
 floorplan.push(rm110);
 
 var rm111 = rsr.rect(18.000011, 900.36218, 130, 60).attr({
@@ -99,7 +100,7 @@ var rm111 = rsr.rect(18.000011, 900.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm111');
+}).transform("t0,-552.36216").data('id', '111');
 floorplan.push(rm111);
 
 var rm112 = rsr.rect(18.000011, 962.36218, 130, 90).attr({
@@ -115,7 +116,7 @@ var rm112 = rsr.rect(18.000011, 962.36218, 130, 90).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm112');
+}).transform("t0,-552.36216").data('id', '112');
 floorplan.push(rm112);
 
 var rm105 = rsr.path("m 176,566.36216 0,60 0,40 50,0 0,-40 50,0 0,-60 -100,0 z").attr({
@@ -129,7 +130,7 @@ var rm105 = rsr.path("m 176,566.36216 0,60 0,40 50,0 0,-40 50,0 0,-60 -100,0 z")
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm105');
+}).transform("t0,-552.36216").data('id', '105');
 floorplan.push(rm105);
 
 var rm104 = rsr.path("m 228,628.36216 0,40 -50,0 0,60 100,0 0,-60 0,-40 -50,0 z").attr({
@@ -143,7 +144,7 @@ var rm104 = rsr.path("m 228,628.36216 0,40 -50,0 0,60 100,0 0,-60 0,-40 -50,0 z"
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm104');
+}).transform("t0,-552.36216").data('id', '104');
 floorplan.push(rm104);
 
 var rm117 = rsr.path("m 422,566.36216 0,60 0,40 50,0 0,-40 50,0 0,-60 -100,0 z").attr({
@@ -157,7 +158,7 @@ var rm117 = rsr.path("m 422,566.36216 0,60 0,40 50,0 0,-40 50,0 0,-60 -100,0 z")
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm117');
+}).transform("t0,-552.36216").data('id', '117');
 floorplan.push(rm117);
 
 var rm116 = rsr.path("m 474,628.36216 0,40 -50,0 0,60 100,0 0,-60 0,-40 -50,0 z").attr({
@@ -171,7 +172,7 @@ var rm116 = rsr.path("m 474,628.36216 0,40 -50,0 0,60 100,0 0,-60 0,-40 -50,0 z"
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm116');
+}).transform("t0,-552.36216").data('id', '116');
 floorplan.push(rm116);
 
 var rm114 = rsr.path("m 474,782.36216 0,40 -50,0 0,90 100,0 0,-90 0,-40 -50,0 z").attr({
@@ -185,7 +186,7 @@ var rm114 = rsr.path("m 474,782.36216 0,40 -50,0 0,90 100,0 0,-90 0,-40 -50,0 z"
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm114');
+}).transform("t0,-552.36216").data('id', '114');
 floorplan.push(rm114);
 
 var rm115 = rsr.path("m 422,730.36216 0,50 0,40 50,0 0,-40 50,0 0,-50 -100,0 z").attr({
@@ -199,7 +200,7 @@ var rm115 = rsr.path("m 422,730.36216 0,50 0,40 50,0 0,-40 50,0 0,-50 -100,0 z")
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm115');
+}).transform("t0,-552.36216").data('id', '115');
 floorplan.push(rm115);
 
 var rm102 = rsr.path("m 228,782.36216 0,40 -50,0 0,90 100,0 0,-90 0,-40 -50,0 z").attr({
@@ -213,10 +214,10 @@ var rm102 = rsr.path("m 228,782.36216 0,40 -50,0 0,90 100,0 0,-90 0,-40 -50,0 z"
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm102');
+}).transform("t0,-552.36216").data('id', '102');
 floorplan.push(rm102);
 
-var rm102 = rsr.path("m 176,730.36216 0,50 0,40 50,0 0,-40 50,0 0,-50 -100,0 z").attr({
+var rm103 = rsr.path("m 176,730.36216 0,50 0,40 50,0 0,-40 50,0 0,-50 -100,0 z").attr({
     opacity: '1',
     fill: '#e6e6e6',
     "fill-opacity": '1',
@@ -227,7 +228,7 @@ var rm102 = rsr.path("m 176,730.36216 0,50 0,40 50,0 0,-40 50,0 0,-50 -100,0 z")
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm102');
+}).transform("t0,-552.36216").data('id', '103');
 floorplan.push(rm102);
 
 var rect3417 = rsr.rect(280, 852.36218, 139.99998, 60).attr({
@@ -917,9 +918,10 @@ var text4442 = rsr.text(465.16934, 1026.8123, 'Stairs').attr({
     "stroke-opacity": '1'
 }).transform("t0,-552.36216").data('id', 'text4442');
 
+
 // Iterate through the regions & change Yorkshire's fill colour to gold
 for (var i = 0; i < floorplan.length; i++) {
-
+    console.log(i);
     // Change Yorkshire's fill colour to gold
     if (floorplan[i].data('id') == 'rm105') {
         floorplan[i].node.setAttribute('fill', 'gold');
@@ -928,10 +930,20 @@ for (var i = 0; i < floorplan.length; i++) {
     // Showing off
     floorplan[i].mouseover(function(e){
         this.node.style.opacity = 0.7;
-        document.getElementById('region-name').innerHTML = this.data('region');
+       // document.getElementById('region-name').innerHTML = this.data('region');
+    });
+
+    floorplan[i].click(function(e){
+        console.log(this.data('id'));
+        populateSidebar('1',this.data('id'));
     });
 
     floorplan[i].mouseout(function(e){
         this.node.style.opacity = 1;
     });
 }
+
+
+
+
+
