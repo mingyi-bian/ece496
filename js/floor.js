@@ -261,7 +261,7 @@ var rm118 = rsr.rect(554, 558.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm118');
+}).transform("t0,-552.36216").data('id', '118');
 floorplan.push(rm118);
 
 var rm119 = rsr.rect(554, 620.36218, 130, 60).attr({
@@ -277,7 +277,7 @@ var rm119 = rsr.rect(554, 620.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm119');
+}).transform("t0,-552.36216").data('id', '119');
 floorplan.push(rm119);
 
 var rm120 = rsr.rect(554, 682.36218, 130, 60).attr({
@@ -293,7 +293,7 @@ var rm120 = rsr.rect(554, 682.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm120');
+}).transform("t0,-552.36216").data('id', '120');
 floorplan.push(rm120);
 
 var rm121 = rsr.rect(554, 744.36218, 130, 60).attr({
@@ -309,7 +309,7 @@ var rm121 = rsr.rect(554, 744.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm121');
+}).transform("t0,-552.36216").data('id', '121');
 floorplan.push(rm121);
 
 var rm122 = rsr.rect(554, 806.36218, 130, 60).attr({
@@ -325,7 +325,7 @@ var rm122 = rsr.rect(554, 806.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm122');
+}).transform("t0,-552.36216").data('id', '122');
 floorplan.push(rm122);
 
 var rm123 = rsr.rect(554, 868.36218, 130, 60).attr({
@@ -341,7 +341,7 @@ var rm123 = rsr.rect(554, 868.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm123');
+}).transform("t0,-552.36216").data('id', '123');
 floorplan.push(rm123);
 
 var rm124 = rsr.rect(554, 930.36218, 130, 60).attr({
@@ -357,7 +357,7 @@ var rm124 = rsr.rect(554, 930.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm124');
+}).transform("t0,-552.36216").data('id', '124');
 floorplan.push(rm124);
 
 var rm125 = rsr.rect(554, 992.36218, 130, 60).attr({
@@ -373,7 +373,7 @@ var rm125 = rsr.rect(554, 992.36218, 130, 60).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm125');
+}).transform("t0,-552.36216").data('id', '125');
 floorplan.push(rm125);
 
 var stairsLeft = rsr.rect(178, 942.36218, 50, 110).attr({
@@ -421,7 +421,7 @@ var rm101 = rsr.rect(230, 942.36218, 119.99999, 110).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm101');
+}).transform("t0,-552.36216").data('id', '101');
 floorplan.push(rm101);
 
 var rm113 = rsr.rect(352, 942.36218, 119.99999, 110).attr({
@@ -437,7 +437,7 @@ var rm113 = rsr.rect(352, 942.36218, 119.99999, 110).attr({
     "stroke-miterlimit": '4',
     "stroke-dasharray": 'none',
     "stroke-opacity": '0'
-}).transform("t0,-552.36216").data('id', 'rm113');
+}).transform("t0,-552.36216").data('id', '113');
 floorplan.push(rm113);
 
 var text4316 = rsr.text(83, 610, '106').attr({
@@ -563,9 +563,6 @@ var text4442 = rsr.text(499, 1000, 'Stairs').attr({
 
 
 
-// Iterate through the regions & change Yorkshire's fill colour to gold
-for (var i = 0; i < floorplan.length; i++) {
-    console.log(i);
 
 
 // Iterate through the regions & change Yorkshire's fill colour to gold
