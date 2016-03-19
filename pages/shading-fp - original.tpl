@@ -182,13 +182,11 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <!-- <div id="floorplan" style="border: 2px solid black">
+                            
+                            <div id="floorplan" style="border: 2px solid black">
                                 <div class="embed-responsive embed-responsive-4by3">
                                     <embed class="embed-responsive-item" src="../img/floor-1.png"></embed>
                                 </div>
-                            </div> -->
-                            <div id="floorplan" style="border: 2px solid black">
-                                <!-- Raphael JS Map Here -->
                             </div>
                         </div>
                         <!-- /.panel-body -->
@@ -331,10 +329,6 @@
     <!-- Timepicker -->
     <script src="../bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 
-    <!-- Raphael -->
-    <script src="../bower_components/raphael/raphael.js"></script>
-    <script src="../js/floor.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -343,6 +337,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Connecting to JSON file -->
+    <!-- <script src="../js/main.js"></script> -->
 
     <!-- Floor Plans -->
     <script type="text/javascript">
