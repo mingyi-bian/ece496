@@ -1,11 +1,10 @@
 var w = 700;
 var h = 500;
-var rsr = Raphael('floorpland');
+var rsr = Raphael('floorplan');
     rsr.setViewBox(0,0,w,h,true);
     rsr.setSize('100%', '100%');
 
 var floor2 = [];
-
 var rm206 = rsr.rect(18.000006, 560.36218, 130, 90).attr({
     y: '560.36218',
     x: '18.000006',
@@ -562,7 +561,7 @@ var text4442 = rsr.text(499, 1000, 'Stairs').attr({
 for (var i = 0; i < floor2.length; i++) {
 
     // Change Yorkshire's fill colour to gold
-    if (floor2[i].data('id') == '206') {
+    if (floor2[i].data('id') == '105') {
         floor2[i].node.setAttribute('fill', 'gold');
     }
 

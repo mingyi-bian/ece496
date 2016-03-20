@@ -182,11 +182,6 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <!-- <div id="floorplan" style="border: 2px solid black">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <embed class="embed-responsive-item" src="../img/floor-1.png"></embed>
-                                </div>
-                            </div> -->
                             <div id="floorplan">
                                 <!-- Raphael JS Map Here -->
                             </div>
@@ -216,7 +211,7 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
-                                                <input class="form-control" placeholder="Enter Room Number">
+                                                <input class="form-control" placeholder="Enter Room Number" type="number" id="replyNumber" min="101" step="1" max="125" data-bind="value:replyNumber" />
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -333,9 +328,9 @@
 
     <!-- Raphael -->
     <script src="../bower_components/raphael/raphael.js"></script>
-    <script id "floor-js" src="../js/floor1.js"></script>
-    <!-- <script src="../js/floor2.js"></script> -->
-    <!-- <script src="../js/floor3.js"></script> -->
+    <script id="floor1js" src="../js/floor-1st.js"></script>
+    <!-- <script src="../js/floor-2nd.js"></script> -->
+    <!-- <script src="../js/floor-3rd.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -350,18 +345,19 @@
     <script type="text/javascript">
 	$(document).ready(function(){
 		$("#floor1-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor1.js');
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
+            $.getScript('../js/floor-1st.js');
         });
 
         $("#floor2-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor2.js');
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
+            // $('script').last().remove();
+            $.getScript('../js/floor-2nd.js');
 		});
 
         $("#floor3-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor3.js');
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
+            $.getScript('../js/floor-3rd.js');
         });
 	});
 	</script>

@@ -1,11 +1,10 @@
 var w = 700;
 var h = 500;
-var rsr = Raphael('floor3');
+var rsr = Raphael('floorplan');
     rsr.setViewBox(0,0,w,h,true);
     rsr.setSize('100%', '100%');
 
 var floor3 = [];
-
 var rm306 = rsr.rect(18.000006, 560.36218, 130, 90).attr({
     y: '560.36218',
     x: '18.000006',
@@ -437,7 +436,7 @@ var rm113 = rsr.rect(352, 942.36218, 119.99999, 110).attr({
 }).transform("t0,-552.36216").data('id', '113');
 floor3.push(rm113);
 
-var text4316 = rsr.text(83, 610, '206').attr({
+var text4316 = rsr.text(83, 610, '306').attr({
     "font-size": '22px',
     fill: '#4d4d4d'
 }).transform("t0,-552.36216").data('id', 'text4316');
