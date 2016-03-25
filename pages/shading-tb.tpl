@@ -23,6 +23,9 @@
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
+    <!-- DataTables Select CSS -->
+    <link href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
@@ -168,7 +171,7 @@
                                 <table class="table table-striped table-bordered table-hover" id="shading-table">
                                     <thead>
                                         <tr>
-                                            <th>Select</th>
+                                            <th></th>
                                             <th>Room</th>
                                             <th>Floor</th>
                                             <th>Facing</th>
@@ -181,8 +184,19 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>[]</td> <!--TO-DO: Change to checkbox button-->
+                                            <td></td>
                                             <td>101</td>
+                                            <td>1</td>
+                                            <td>West</td>
+                                            <td>Yes</td>
+                                            <td>Manual</td>
+                                            <td>No</td>
+                                            <td>21</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>102</td>
                                             <td>1</td>
                                             <td>West</td>
                                             <td>Yes</td>
@@ -215,7 +229,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <!--Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -223,23 +237,32 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
+    <!-- DataTables Select JS -->
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
+
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-    <!-- Connecting to JSON file -->
-    <!-- <script src="../js/main.js"></script> -->
-
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
     $(document).ready(function() {
-        $('#shading-table').DataTable({
-                responsive: true,
-                //"ajax": "../api/data.txt"
-        });
+        $('#shading-table').DataTable( {
+            responsive: true,
+            columnDefs: [ {
+                orderable: false,
+                className: 'select-checkbox',
+                targets:   0
+            } ],
+            select: {
+                style:    'multi',
+                selector: 'td:first-child'
+            },
+            order: [[ 1, 'asc' ]]
+        } );
     });
     </script>
 
