@@ -41,10 +41,10 @@ function populateSidebar(Floor, RoomNumber){
                                     }
                                   
                                     else if (i == 3){ // Temperature
-                                        $('#temperature').val(value);
+                                        $('#temperature').html(value + " C");
                                     }
                                     else if (i == 4){
-                                        $('#light').val(value);
+                                        $('#light').html(value);
                                     }
                                     else if (i == 5){
                                         if (value == '0'){
