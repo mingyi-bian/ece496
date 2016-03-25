@@ -20,6 +20,8 @@
     <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
+    <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
@@ -179,6 +181,7 @@
                                             <th>Mode</th>
                                             <th>Alarm Request</th>
                                             <th>Temperature</th>
+                                            <th>Light Level</th>
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
@@ -192,6 +195,7 @@
                                             <td>Manual</td>
                                             <td>No</td>
                                             <td>21</td>
+                                            <td>Light #</td>
                                             <td>4</td>
                                         </tr>
                                         <tr>
@@ -203,6 +207,7 @@
                                             <td>Manual</td>
                                             <td>No</td>
                                             <td>21</td>
+                                            <td>Light #</td>
                                             <td>4</td>
                                         </tr>
                                     </tbody>
@@ -242,15 +247,20 @@
     <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
 
     <!-- DataTables JavaScript -->
+    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <script src="../js/populateTable.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
+    var t;
     $(document).ready(function() {
-        $('#shading-table').DataTable( {
+        t = $('#shading-table').DataTable( {
             responsive: true,
             columnDefs: [ {
                 orderable: false,
@@ -263,7 +273,20 @@
             },
             order: [[ 1, 'asc' ]]
         } );
+
+        $('#shading-table tbody').on( 'click', 'tr', function () {
+            $(this).toggleClass('selected');
+         } );
+
+        var a = 101;
+        for (i = 0; i < 25; i++)
+        {
+            addToShadingTable('1',a);
+            a = a + 1;
+        }
+
     });
+
     </script>
 
 </body>

@@ -211,6 +211,15 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
+
+                                                <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="facing">Facing</td>
+                                            <td>
+                                                <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly>
+
                                                 <input class="form-control" placeholder="Enter Room Number" type="number" id="replyNumber" min="101" step="1" max="125" data-bind="value:replyNumber" />
                                             </td>
                                         </tr>
@@ -219,10 +228,10 @@
                                             <td>Occupancy</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline1" value="option1" checked>Yes
+                                                <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineYes" value="option1">Yes
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline2" value="option2">No
+                                                    <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineNo" value="option2">No
                                                 </label>
                                             </td>
                                         </tr>
@@ -231,10 +240,10 @@
                                             <td>Mode</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline1" value="option1" checked>Manual
+                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineMan" value="option1">Manual
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline2" value="option2">Auto
+                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineAuto" value="option2">Auto
                                                 </label>
                                             </td>
                                         </tr>
@@ -253,41 +262,47 @@
                                         <tr>
                                             <td>Temperature</td>
                                             <td>
-                                                <input class="form-control" placeholder="Between 18-23 deg C" type="number" id="replyNumber" min="18" step="0.5" max="23" data-bind="value:replyNumber" />
+                                                <input class="form-control" placeholder="in C" id="temperature" data-bind="value:replyNumber" readonly>
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
+                                            <tr>
+                                            <td>Light Level</td>
+                                            <td>
+                                                <input class="form-control" placeholder="in Lux"  id="light"  data-bind="value:replyNumber" readonly>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>Blind Tilt</td>
                                             <td>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option0" checked>0/5 (Open)
+                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/5 (Open)
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">1/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">2/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">3/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">4/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/5
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">5/5 (Closed)
+                                                        <input type="radio" name="optionsRadios" id="Tilt5" value="option5">5/5 (Closed)
                                                     </label>
                                                 </div>
                                             </td>
@@ -298,11 +313,11 @@
                                 </table>
                                 <!-- /.table -->
                                 <div class="col-md-3 col-md-offset-3">
-                                    <button id="save-fp" type="button" class="btn btn-primary">Save</button>
+                                    <button id="saveButton"  type="button" class="btn btn-primary">Save</button>
                                 </div>
                                 <!-- /.col-md-3 col-md-offset-2 -->
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-default">Cancel</button>
+                                    <button type="button" id = "cancelButton" class="btn btn-default">Cancel</button>
                                 </div>
                                 <!-- /.col-md-3 col-md-offset-2 -->
                             </div>
@@ -341,6 +356,15 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+
+    <!-- Populate Sidebar -->
+    <script src="../js/populateSideBar.js"></script>
+
+    <!-- User Push -->
+    <script src="../js/push.js"></script>
+
+   
+
     <!-- Floor Plans -->
     <script type="text/javascript">
 	$(document).ready(function(){
@@ -357,8 +381,12 @@
 
         $("#floor3-caret").click(function(){
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
+<<<<<<< HEAD
+        });        
+=======
             $.getScript('../js/floor-3rd.js');
         });
+>>>>>>> 684eae11179d824ed73949e89e35a82e34673e2b
 	});
 	</script>
 
@@ -366,7 +394,77 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $('#timepicker1').timepicker();
+
+        $('#cancelButton').click(function() {
+
+            var value = $('#RoomTextbox').val();
+            console.log(value);
+
+            if (value != null){
+               populateSidebar('1',value); 
+            }
+
+        });
+
+        var pushInformation = [];
+    
+        $('#saveButton').click(function() {
+
+            //Get all values from the boxes
+            //Push the changes 
+
+            pushInformation.push($('#RoomTextbox').val());
+            pushInformation.push($('#facingTextbox').val());
+            if($('#optionsRadiosInlineYes').is(':checked')){
+                pushInformation.push("Yes");
+            }
+            else{
+                pushInformation.push("No");
+            }
+
+            if($('#optionsRadiosInlineAuto').is(':checked')){
+                pushInformation.push("Auto");
+            } 
+            else {
+                pushInformation.push("Manual");
+            }
+
+            pushInformation.push($('#timepicker1').val());
+            pushInformation.push($('#temperature').val());
+            pushInformation.push($('#light').val());
+            if($('#Tilt0').is(':checked')){
+                pushInformation.push("0");
+            } 
+            else if($('#Tilt1').is(':checked')){
+                pushInformation.push("1");
+            } 
+            else if($('#Tilt2').is(':checked')){
+                pushInformation.push("2");
+            } 
+            else if($('#Tilt3').is(':checked')){
+                pushInformation.push("3");
+            } 
+            else if($('#Tilt4').is(':checked')){
+                pushInformation.push("4");
+            } 
+            else if($('#Tilt5').is(':checked')){
+                pushInformation.push("5");
+            } 
+
+            console.log(pushInformation);   
+            pushUserInfo(pushInformation);
+        });
+
+
+
     });
+
+
+
+
+
+
+
     </script>
 
 </body>
