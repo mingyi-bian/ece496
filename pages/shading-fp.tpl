@@ -381,12 +381,12 @@
 
         $("#floor3-caret").click(function(){
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
-<<<<<<< HEAD
+
         });        
-=======
+
             $.getScript('../js/floor-3rd.js');
         });
->>>>>>> 684eae11179d824ed73949e89e35a82e34673e2b
+
 	});
 	</script>
 
@@ -428,8 +428,6 @@
             else {
                 pushInformation.push("Manual");
             }
-
-            pushInformation.push($('#timepicker1').val());
             pushInformation.push($('#temperature').val());
             pushInformation.push($('#light').val());
             if($('#Tilt0').is(':checked')){
