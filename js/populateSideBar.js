@@ -13,8 +13,8 @@ function populateSidebar(Floor, RoomNumber){
                             success:function(data){  
                                 $.each(data.lrange,function(i,value){
                                     if (i == 0){ // Facing
-                                        $('#RoomTextbox').val(RoomNumber);
-                                        $('#facingTextbox').val(value);
+                                        $('#RoomTextbox').html(RoomNumber);
+                                        $('#facingTextbox').html(value);
                                     } 
                                     else if (i == 1){ // Occupied
                                         if (data == 'Yes'){

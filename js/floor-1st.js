@@ -617,12 +617,6 @@ var old = null;
 // Iterate through the regions & change Yorkshire's fill colour to gold
 for (var i = 0; i < floor1.length; i++) {
 
-    // Change Yorkshire's fill colour to gold
-    if (floor1[i].data('id') == '105') {
-        floor1[i].node.setAttribute('fill', 'gold');
-    }
-
-    // Showing off
     floor1[i].mouseover(function(e){
         this.node.style.opacity = 0.7;
 

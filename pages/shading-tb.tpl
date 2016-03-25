@@ -20,10 +20,13 @@
     <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
-    <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+    <link href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- DataTables Select CSS -->
+    <link href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
@@ -170,6 +173,7 @@
                                 <table class="table table-striped table-bordered table-hover" id="shading-table">
                                     <thead>
                                         <tr>
+                                            <th></th>
                                             <th>Room</th>
                                             <th>Floor</th>
                                             <th>Facing</th>
@@ -183,15 +187,28 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Room</td>
-                                            <td>Floor</td>
-                                            <td>Facing</td>
-                                            <td>Occupancy</td>
-                                            <td>Mode</td>
-                                            <td>Alarm Request</td>
-                                            <td>Temperature</td>
-                                            <td>Light Level</td>
-                                            <td>Tilt</td>
+                                            <td></td>
+                                            <td>101</td>
+                                            <td>1</td>
+                                            <td>West</td>
+                                            <td>Yes</td>
+                                            <td>Manual</td>
+                                            <td>No</td>
+                                            <td>21</td>
+                                            <td>Light #</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>102</td>
+                                            <td>1</td>
+                                            <td>West</td>
+                                            <td>Yes</td>
+                                            <td>Manual</td>
+                                            <td>No</td>
+                                            <td>21</td>
+                                            <td>Light #</td>
+                                            <td>4</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -217,7 +234,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <!--Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -226,44 +243,50 @@
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <!-- DataTables Bootstrap JS -->
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
+    <!-- DataTables Select JS -->    
+    <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
+
+    <!-- Redis Database Connection -->
     <script src="../js/populateTable.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-    <!-- Connecting to JSON file -->
-    <!-- <script src="../js/main.js"></script> -->
-
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
     var t;
     $(document).ready(function() {
-        t = $('#shading-table').DataTable({
-                responsive: true
-    
-        });
+        t = $('#shading-table').DataTable( {
+            responsive: true,
+            columnDefs: [ {
+                orderable: false,
+                className: 'select-checkbox',
+                targets:   0
+            } ],
+            select: {
+                style:    'multi',
+                selector: 'td:first-child'
+            },
+            order: [[ 1, 'asc' ]]
+        } );
 
         $('#shading-table tbody').on( 'click', 'tr', function () {
             $(this).toggleClass('selected');
          } );
 
-        var a = 101;
-        for (i = 0; i < 25; i++)
-        {
-            addToShadingTable('1',a);
-            a = a + 1;
-        }
+        // var a = 101;
+        // for (i = 0; i < 25; i++)
+        // {
+        //     addToShadingTable('1',a);
+        //     a = a + 1;
+        // }
 
     });
-
-
-    
-
-
 
     </script>
 
