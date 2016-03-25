@@ -20,6 +20,8 @@
     <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
+    <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
@@ -179,8 +181,18 @@
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
-                                    <tbody id = "tbody">
-                     
+                                    <tbody>
+                                        <tr>
+                                            <td>Room</td>
+                                            <td>Floor</td>
+                                            <td>Facing</td>
+                                            <td>Occupancy</td>
+                                            <td>Mode</td>
+                                            <td>Alarm Request</td>
+                                            <td>Temperature</td>
+                                            <td>Light Level</td>
+                                            <td>Tilt</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -215,6 +227,7 @@
 
     <!-- DataTables JavaScript -->
     <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <script src="../js/populateTable.js"></script>
@@ -230,9 +243,13 @@
     var t;
     $(document).ready(function() {
         t = $('#shading-table').DataTable({
-                responsive: true,
-                //"ajax": "../api/data.txt"
+                responsive: true
+    
         });
+
+        $('#shading-table tbody').on( 'click', 'tr', function () {
+            $(this).toggleClass('selected');
+         } );
 
         var a = 101;
         for (i = 0; i < 25; i++)
@@ -241,7 +258,6 @@
             a = a + 1;
         }
 
-       // $('#shading-table tr:last').after('<tr><td>Hello</td><td>Apple></td></tr>');
     });
 
 

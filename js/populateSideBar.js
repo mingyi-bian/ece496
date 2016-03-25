@@ -14,6 +14,7 @@ function populateSidebar(Floor, RoomNumber){
                                 $.each(data.lrange,function(i,value){
                                     if (i == 0){ // Facing
                                         $('#RoomTextbox').val(RoomNumber);
+                                        $('#facingTextbox').val(value);
                                     } 
                                     else if (i == 1){ // Occupied
                                         if (data == 'Yes'){
@@ -45,7 +46,7 @@ function populateSidebar(Floor, RoomNumber){
                                         $('#temperature').val(value);
                                     }
                                     else if (i == 5){
-                                        //Do Nothing for light level
+                                        $('#light').val(value);
                                     }
                                     else if (i == 6){
                                         if (value == '0/5'){

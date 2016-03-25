@@ -563,7 +563,7 @@ var text4442 = rsr.text(499, 1000, 'Stairs').attr({
 
 
 
-
+var old = null;
 
 // Iterate through the regions & change Yorkshire's fill colour to gold
 for (var i = 0; i < floorplan.length; i++) {
@@ -594,7 +594,12 @@ for (var i = 0; i < floorplan.length; i++) {
     floorplan[i].click(function(e){
         console.log(this.data('id'));
         populateSidebar('1',this.data('id'));
-        // document.getElementById('region-name').innerHTML = this.data('region');
+        this.node.setAttribute('fill', 'gold');
+        if (old != null){
+           old.setAttribute('fill', '#e6e6e6'); 
+        }
+        
+        old = this.node;
     });
 
     floorplan[i].mouseout(function(e){

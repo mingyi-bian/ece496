@@ -216,7 +216,13 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
-                                                <input id = "RoomTextbox"class="form-control" placeholder="Enter Room Number">
+                                                <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="facing">Facing</td>
+                                            <td>
+                                                <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly>
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -224,10 +230,10 @@
                                             <td>Occupancy</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInlineYes" id="optionsRadiosInlineYes" value="option1">Yes
+                                                <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineYes" value="option1">Yes
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineNo" id="optionsRadiosInlineNo" value="option2">No
+                                                    <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineNo" value="option2">No
                                                 </label>
                                             </td>
                                         </tr>
@@ -236,10 +242,10 @@
                                             <td>Mode</td>
                                             <td>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineMan" id="optionsRadiosInlineMan" value="option1">Manual
+                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineMan" value="option1">Manual
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineAuto" id="optionsRadiosInlineAuto" value="option2">Auto
+                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineAuto" value="option2">Auto
                                                 </label>
                                             </td>
                                         </tr>
@@ -258,10 +264,16 @@
                                         <tr>
                                             <td>Temperature</td>
                                             <td>
-                                                <input class="form-control" placeholder="Between 18-23 deg C" type="number" id="temperature" min="18" step="0.5" max="23" data-bind="value:replyNumber" />
+                                                <input class="form-control" placeholder="in C" id="temperature" data-bind="value:replyNumber" readonly>
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
+                                            <tr>
+                                            <td>Light Level</td>
+                                            <td>
+                                                <input class="form-control" placeholder="in Lux"  id="light"  data-bind="value:replyNumber" readonly>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>Blind Tilt</td>
                                             <td>
@@ -303,11 +315,11 @@
                                 </table>
                                 <!-- /.table -->
                                 <div class="col-md-3 col-md-offset-3">
-                                    <button id="save-fp" type="button" class="btn btn-primary">Save</button>
+                                    <button id="saveButton"  type="button" class="btn btn-primary">Save</button>
                                 </div>
                                 <!-- /.col-md-3 col-md-offset-2 -->
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-default">Cancel</button>
+                                    <button type="button" id = "cancelButton" class="btn btn-default">Cancel</button>
                                 </div>
                                 <!-- /.col-md-3 col-md-offset-2 -->
                             </div>
@@ -348,6 +360,9 @@
     <!-- Populate Sidebar -->
     <script src="../js/populateSideBar.js"></script>
 
+    <!-- User Push -->
+    <script src="../js/push.js"></script>
+
    
 
     <!-- Floor Plans -->
@@ -380,7 +395,77 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $('#timepicker1').timepicker();
+
+        $('#cancelButton').click(function() {
+
+            var value = $('#RoomTextbox').val();
+            console.log(value);
+
+            if (value != null){
+               populateSidebar('1',value); 
+            }
+
+        });
+
+        var pushInformation = [];
+    
+        $('#saveButton').click(function() {
+
+            //Get all values from the boxes
+            //Push the changes 
+
+            pushInformation.push($('#RoomTextbox').val());
+            pushInformation.push($('#facingTextbox').val());
+            if($('#optionsRadiosInlineYes').is(':checked')){
+                pushInformation.push("Yes");
+            }
+            else{
+                pushInformation.push("No");
+            }
+
+            if($('#optionsRadiosInlineAuto').is(':checked')){
+                pushInformation.push("Auto");
+            } 
+            else {
+                pushInformation.push("Manual");
+            }
+
+            pushInformation.push($('#timepicker1').val());
+            pushInformation.push($('#temperature').val());
+            pushInformation.push($('#light').val());
+            if($('#Tilt0').is(':checked')){
+                pushInformation.push("0");
+            } 
+            else if($('#Tilt1').is(':checked')){
+                pushInformation.push("1");
+            } 
+            else if($('#Tilt2').is(':checked')){
+                pushInformation.push("2");
+            } 
+            else if($('#Tilt3').is(':checked')){
+                pushInformation.push("3");
+            } 
+            else if($('#Tilt4').is(':checked')){
+                pushInformation.push("4");
+            } 
+            else if($('#Tilt5').is(':checked')){
+                pushInformation.push("5");
+            } 
+
+            console.log(pushInformation);   
+            pushUserInfo(pushInformation);
+        });
+
+
+
     });
+
+
+
+
+
+
+
     </script>
 
 </body>
