@@ -29,9 +29,6 @@
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Timepicker -->
-    <link href="../bower_components/bootstrap-timepicker/css/timepicker.less"/>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -211,16 +208,15 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
-
-                                                <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly>
+                                                <p id = "RoomTextbox" class="radio-inline" style="padding-left: 0px">101</p>
+                                                <!-- <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly> -->
                                             </td>
                                         </tr>
                                         <tr>
                                             <td id="facing">Facing</td>
                                             <td>
-                                                <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly>
-
-                                                <input class="form-control" placeholder="Enter Room Number" type="number" id="replyNumber" min="101" step="1" max="125" data-bind="value:replyNumber" />
+                                                <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">West</p>
+                                                <!-- <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly> -->
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -249,27 +245,18 @@
                                         </tr>
                                         <!-- /.tr -->
                                         <tr>
-                                            <td>Alarm Request</td>
-                                            <td>
-                                                <div class="input-group bootstrap-timepicker timepicker">
-                                                    <input id="timepicker1" type="text" class="form-control input-small">
-                                                    <!-- Icon for time input -->
-                                                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span> -->
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
                                             <td>Temperature</td>
                                             <td>
-                                                <input class="form-control" placeholder="in C" id="temperature" data-bind="value:replyNumber" readonly>
+                                                <p id="temperature" class="radio-inline" style="padding-left: 0px">in C</p>
+                                                <!-- <input id="temperature" class="form-control" placeholder="in C" data-bind="value:replyNumber" readonly> -->
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
                                             <tr>
                                             <td>Light Level</td>
                                             <td>
-                                                <input class="form-control" placeholder="in Lux"  id="light"  data-bind="value:replyNumber" readonly>
+                                                <p id="light" class="radio-inline" style="padding-left: 0px">in Lux</p>
+                                                <!-- <input id="light" class="form-control" placeholder="in Lux" data-bind="value:replyNumber" readonly> -->
                                             </td>
                                         </tr>
                                         <tr>
@@ -277,32 +264,37 @@
                                             <td>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/5 (Open)
+                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/6 (Open)
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/6
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/6
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/6
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/5
+                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/6
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt5" value="option5">5/5 (Closed)
+                                                        <input type="radio" name="optionsRadios" id="Tilt5" value="option5">5/6
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadios" id="Tilt6" value="option6">6/6 (Closed)
                                                     </label>
                                                 </div>
                                             </td>
@@ -336,10 +328,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Timepicker -->
-    <script src="../bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script></script> -->
 
     <!-- Raphael -->
     <script src="../bower_components/raphael/raphael.js"></script>
@@ -363,11 +352,11 @@
     <!-- User Push -->
     <script src="../js/push.js"></script>
 
-   
-
-    <!-- Floor Plans -->
+    <!-- Misc. Functions -->
     <script type="text/javascript">
 	$(document).ready(function(){
+
+        // Floor Plans
 		$("#floor1-caret").click(function(){
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
             $.getScript('../js/floor-1st.js');
@@ -375,25 +364,21 @@
 
         $("#floor2-caret").click(function(){
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
-            // $('script').last().remove();
             $.getScript('../js/floor-2nd.js');
 		});
 
         $("#floor3-caret").click(function(){
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
-<<<<<<< HEAD
-        });        
-=======
-            $.getScript('../js/floor-3rd.js');
-        });
->>>>>>> 684eae11179d824ed73949e89e35a82e34673e2b
+        });   
+
 	});
 	</script>
 
-    <!-- Timepicker -->
+
+    <!-- Redis Database -->
     <script type="text/javascript">
     $(document).ready(function(){
-        $('#timepicker1').timepicker();
+        
 
         $('#cancelButton').click(function() {
 
@@ -429,7 +414,6 @@
                 pushInformation.push("Manual");
             }
 
-            pushInformation.push($('#timepicker1').val());
             pushInformation.push($('#temperature').val());
             pushInformation.push($('#light').val());
             if($('#Tilt0').is(':checked')){
@@ -454,17 +438,7 @@
             console.log(pushInformation);   
             pushUserInfo(pushInformation);
         });
-
-
-
     });
-
-
-
-
-
-
-
     </script>
 
 </body>

@@ -20,7 +20,7 @@
     <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
-    <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+    <link href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
@@ -242,15 +242,16 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- DataTables Select JS -->
+    <!-- DataTables JavaScript -->
     <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+    <!-- DataTables Bootstrap JS -->
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <!-- DataTables Select JS -->    
     <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
 
-    <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
+    <!-- Redis Database Connection -->
     <script src="../js/populateTable.js"></script>
 
     <!-- Custom Theme JavaScript -->
@@ -278,12 +279,12 @@
             $(this).toggleClass('selected');
          } );
 
-        var a = 101;
-        for (i = 0; i < 25; i++)
-        {
-            addToShadingTable('1',a);
-            a = a + 1;
-        }
+        // var a = 101;
+        // for (i = 0; i < 25; i++)
+        // {
+        //     addToShadingTable('1',a);
+        //     a = a + 1;
+        // }
 
     });
 
