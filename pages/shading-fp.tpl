@@ -173,21 +173,16 @@
                                     <ul class="dropdown-menu pull-right" role="menu">
                                         <li><a href="shading-tb.html">All Floors (Table)</a></li>
                                         <li class="divider"></li>
-                                        <li id="floor1-img"><a href="#">Floor 1</a></li>
-                                        <li id="floor2-img"><a href="#">Floor 2</a></li>
-                                        <li id="floor3-img"><a href="#">Floor 3</a></li>
+                                        <li id="floor1-caret"><a href="#">Floor 1</a></li>
+                                        <li id="floor2-caret"><a href="#">Floor 2</a></li>
+                                        <li id="floor3-caret"><a href="#">Floor 3</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <!-- <div id="floorplan" style="border: 2px solid black">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <embed class="embed-responsive-item" src="../img/floor-1.png"></embed>
-                                </div>
-                            </div> -->
-                            <div id="floorplan" style="border: 2px solid black">
+                            <div id="floorplan">
                                 <!-- Raphael JS Map Here -->
                             </div>
                         </div>
@@ -216,6 +211,7 @@
                                         <tr>
                                             <td id="room">Room</td>
                                             <td>
+
                                                 <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly>
                                             </td>
                                         </tr>
@@ -223,6 +219,8 @@
                                             <td id="facing">Facing</td>
                                             <td>
                                                 <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly>
+
+                                                <input class="form-control" placeholder="Enter Room Number" type="number" id="replyNumber" min="101" step="1" max="125" data-bind="value:replyNumber" />
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -345,7 +343,9 @@
 
     <!-- Raphael -->
     <script src="../bower_components/raphael/raphael.js"></script>
-    <script src="../js/floor.js"></script>
+    <script id="floor1js" src="../js/floor-1st.js"></script>
+    <!-- <script src="../js/floor-2nd.js"></script> -->
+    <!-- <script src="../js/floor-3rd.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -368,26 +368,25 @@
     <!-- Floor Plans -->
     <script type="text/javascript">
 	$(document).ready(function(){
-		$("#floor1-img").click(function(){
-            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
-                                    "<embed class='embed-responsive-item' src='../img/floor-1.png'></embed>" +
-                                 "</div>");
+		$("#floor1-caret").click(function(){
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
+            $.getScript('../js/floor-1st.js');
         });
 
-        $("#floor2-img").click(function(){
-            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
-                                    "<embed class='embed-responsive-item' src='../img/floor-2.png'></embed>" +
-                                 "</div>");
+        $("#floor2-caret").click(function(){
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
+            // $('script').last().remove();
+            $.getScript('../js/floor-2nd.js');
 		});
 
-        $("#floor3-img").click(function(){
-            $("#floorplan").html("<div class='embed-responsive embed-responsive-4by3'>" +
-                                    "<embed class='embed-responsive-item' src='../img/floor-3.png'></embed>" +
-                                 "</div>");
+        $("#floor3-caret").click(function(){
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
+<<<<<<< HEAD
         });        
+=======
+            $.getScript('../js/floor-3rd.js');
+        });
+>>>>>>> 684eae11179d824ed73949e89e35a82e34673e2b
 	});
 	</script>
 
