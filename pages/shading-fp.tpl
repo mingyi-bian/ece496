@@ -23,9 +23,6 @@
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -209,14 +206,12 @@
                                             <td id="room">Room</td>
                                             <td>
                                                 <p id = "RoomTextbox" class="radio-inline" style="padding-left: 0px">101</p>
-                                                <!-- <input id = "RoomTextbox"class="form-control" placeholder="Room Number" readonly> -->
                                             </td>
                                         </tr>
                                         <tr>
                                             <td id="facing">Facing</td>
                                             <td>
                                                 <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">West</p>
-                                                <!-- <input id = "facingTextbox"class="form-control" placeholder="Direction of Window" readonly> -->
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -248,7 +243,6 @@
                                             <td>Temperature</td>
                                             <td>
                                                 <p id="temperature" class="radio-inline" style="padding-left: 0px">in C</p>
-                                                <!-- <input id="temperature" class="form-control" placeholder="in C" data-bind="value:replyNumber" readonly> -->
                                             </td>
                                         </tr>
                                         <!-- /.tr -->
@@ -256,7 +250,6 @@
                                             <td>Light Level</td>
                                             <td>
                                                 <p id="light" class="radio-inline" style="padding-left: 0px">in Lux</p>
-                                                <!-- <input id="light" class="form-control" placeholder="in Lux" data-bind="value:replyNumber" readonly> -->
                                             </td>
                                         </tr>
                                         <tr>
@@ -264,37 +257,27 @@
                                             <td>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/6 (Open)
+                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/4 (Open)
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/6
+                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/4
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/6
+                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/4
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/6
+                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/4
                                                     </label>
                                                 </div>
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/6
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt5" value="option5">5/6
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt6" value="option6">6/6 (Closed)
+                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/4 (Closed)
                                                     </label>
                                                 </div>
                                             </td>
@@ -304,14 +287,12 @@
                                     <!-- /.tbody -->
                                 </table>
                                 <!-- /.table -->
-                                <div class="col-md-3 col-md-offset-3">
-                                    <button id="saveButton"  type="button" class="btn btn-primary">Save</button>
+                                <div class="col-md-3 col-md-offset-2">
+                                    <button id="cancelButton" type="button" class="btn btn-default">Cancel</button>
                                 </div>
-                                <!-- /.col-md-3 col-md-offset-2 -->
                                 <div class="col-md-3">
-                                    <button type="button" id = "cancelButton" class="btn btn-default">Cancel</button>
+                                    <button id="saveButton" type="button" class="btn btn-primary">Save Changes</button>
                                 </div>
-                                <!-- /.col-md-3 col-md-offset-2 -->
                             </div>
                             <!-- /.table-responsive -->
                         </div>
@@ -345,12 +326,14 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-
     <!-- Populate Sidebar -->
     <script src="../js/populateSideBar.js"></script>
 
     <!-- User Push -->
     <script src="../js/push.js"></script>
+
+    <!-- Redis Database save-cancel-buttons -->
+    <script src="../js/save-cancel-buttons.js"></script>
 
     <!-- Misc. Functions -->
     <script type="text/javascript">
@@ -373,73 +356,6 @@
 
 	});
 	</script>
-
-
-    <!-- Redis Database -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        
-
-        $('#cancelButton').click(function() {
-
-            var value = $('#RoomTextbox').val();
-            console.log(value);
-
-            if (value != null){
-               populateSidebar('1',value); 
-            }
-
-        });
-
-        var pushInformation = [];
-    
-        $('#saveButton').click(function() {
-
-            //Get all values from the boxes
-            //Push the changes 
-
-            pushInformation.push($('#RoomTextbox').val());
-            pushInformation.push($('#facingTextbox').val());
-            if($('#optionsRadiosInlineYes').is(':checked')){
-                pushInformation.push("Yes");
-            }
-            else{
-                pushInformation.push("No");
-            }
-
-            if($('#optionsRadiosInlineAuto').is(':checked')){
-                pushInformation.push("Auto");
-            } 
-            else {
-                pushInformation.push("Manual");
-            }
-
-            pushInformation.push($('#temperature').val());
-            pushInformation.push($('#light').val());
-            if($('#Tilt0').is(':checked')){
-                pushInformation.push("0");
-            } 
-            else if($('#Tilt1').is(':checked')){
-                pushInformation.push("1");
-            } 
-            else if($('#Tilt2').is(':checked')){
-                pushInformation.push("2");
-            } 
-            else if($('#Tilt3').is(':checked')){
-                pushInformation.push("3");
-            } 
-            else if($('#Tilt4').is(':checked')){
-                pushInformation.push("4");
-            } 
-            else if($('#Tilt5').is(':checked')){
-                pushInformation.push("5");
-            } 
-
-            console.log(pushInformation);   
-            pushUserInfo(pushInformation);
-        });
-    });
-    </script>
 
 </body>
 
