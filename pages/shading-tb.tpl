@@ -279,12 +279,12 @@
             $(this).toggleClass('selected');
          } );
 
-        // var a = 101;
-        // for (i = 0; i < 25; i++)
-        // {
-        //     addToShadingTable('1',a);
-        //     a = a + 1;
-        // }
+        var a = 101;
+        for (i = 0; i < 25; i++)
+        {
+            addToShadingTable('1',a);
+            a = a + 1;
+        }
 
     });
 

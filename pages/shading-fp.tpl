@@ -391,31 +391,13 @@
 
         });
 
-        var pushInformation = [];
+        
     
         $('#saveButton').click(function() {
-
+            var pushInformation = [];
             //Get all values from the boxes
             //Push the changes 
-
-            pushInformation.push($('#RoomTextbox').val());
-            pushInformation.push($('#facingTextbox').val());
-            if($('#optionsRadiosInlineYes').is(':checked')){
-                pushInformation.push("Yes");
-            }
-            else{
-                pushInformation.push("No");
-            }
-
-            if($('#optionsRadiosInlineAuto').is(':checked')){
-                pushInformation.push("Auto");
-            } 
-            else {
-                pushInformation.push("Manual");
-            }
-
-            pushInformation.push($('#temperature').val());
-            pushInformation.push($('#light').val());
+            pushInformation.push($('#RoomTextbox').html());
             if($('#Tilt0').is(':checked')){
                 pushInformation.push("0");
             } 
@@ -433,6 +415,9 @@
             } 
             else if($('#Tilt5').is(':checked')){
                 pushInformation.push("5");
+            } 
+             else if($('#Tilt6').is(':checked')){
+                pushInformation.push("6");
             } 
 
             console.log(pushInformation);   
