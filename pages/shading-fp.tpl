@@ -352,7 +352,7 @@
 
         $("#floor3-caret").click(function(){
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
-        });   
+        });  
 
 	});
 	</script>

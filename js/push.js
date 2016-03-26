@@ -6,12 +6,12 @@ function pushUserInfo(information){
 	    }
 	});
 
-    for (i = 1; i <= 7; i++){
+    
 		$.ajax ({
 		    dataType:"json",
-		    url: "http://127.0.0.1:7379/rpush/"+information[0]+"/"+information[i],
+		    url: "http://127.0.0.1:7379/rpush/"+information[0]+"/"+information[6],
 		    success:function(data){
 		    }
 		});
-	}
+	
 }
