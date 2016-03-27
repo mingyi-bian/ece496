@@ -300,12 +300,14 @@
                 {
                     text: 'Edit',
                     action: function() {
+                        var roomsNewReq_temp = [];
                         var selectData = t.rows({ selected: true }).data();
                         for ( i=0; i<selectData.length; i++ ) {
                             var value = selectData[i];
-                            roomsNewReq.push(value[1]);
-                            // console.log(roomsNewReq);
+                            roomsNewReq_temp.push(value[1]);
+                            roomsNewReq = roomsNewReq_temp;
                         } // for loop
+                        console.log(roomsNewReq,'shading-tp');
                     } // function()
                 }
             ],
@@ -333,12 +335,12 @@
         $('a.dt-button:eq(2)').attr('data-toggle','modal');
         $('a.dt-button:eq(2)').attr('data-target','#editor');
 
-        var a = 101;
-        for (i = 0; i < 25; i++)
-        {
-            addToShadingTable('1',a);
-            a = a + 1;
-        }
+        // var a = 101;
+        // for (i = 0; i < 25; i++)
+        // {
+        //     addToShadingTable(t,'1',a);
+        //     a = a + 1;
+        // }
 
     });
     </script>

@@ -12,18 +12,11 @@ $(document).ready(function() {
     });
     // /. cancelButton
 
-    $('#saveButton').click(function() {
+    $('#saveButton').click(function(roomsNewReq) {
 
+        console.log(roomsNewReq,'save-button');
 
-          var pushInformation = [];
-
-        //Get all values from the boxes
-        //Push the changes 
-
-        // To-Do:
-        // Need to circulate through an array of rooms!
-        pushInformation.push($('#RoomTextbox').html());
-        
+        var pushInformation = [];
 
         // Get all values from the boxes
         // Push the changes 
@@ -31,6 +24,8 @@ $(document).ready(function() {
         // To-Do:
         // Need to circulate through an array of rooms!
         // pushInformation.push($('#roomTextbox').val());
+
+
         pushInformation.push($('#facingTextbox').val());
         if($('#optionsRadiosInlineYes').is(':checked')){
             pushInformation.push("Yes");

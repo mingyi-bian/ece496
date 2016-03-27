@@ -20,8 +20,14 @@
     <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
+    <!-- DataTables Buttons CSS -->
+    <link href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css" rel="stylesheet">
+
     <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- DataTables Select CSS -->
+    <link href="../bower_components/datatables/media/css/select.dataTables.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
@@ -168,27 +174,38 @@
                                 <table class="table table-striped table-bordered table-hover" id="shading-table">
                                     <thead>
                                         <tr>
-                                            <th>Select</th>
+                                            <th></th>
                                             <th>Room</th>
                                             <th>Floor</th>
                                             <th>Facing</th>
                                             <th>Occupancy</th>
                                             <th>Mode</th>
-                                            <th>Alarm Request</th>
                                             <th>Temperature</th>
+                                            <th>Light Level</th>
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>[]</td> <!--TO-DO: Change to checkbox button-->
+                                            <td></td>
                                             <td>101</td>
                                             <td>1</td>
                                             <td>West</td>
                                             <td>Yes</td>
                                             <td>Manual</td>
-                                            <td>No</td>
                                             <td>21</td>
+                                            <td>Light #</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>102</td>
+                                            <td>1</td>
+                                            <td>West</td>
+                                            <td>Yes</td>
+                                            <td>Manual</td>
+                                            <td>21</td>
+                                            <td>Light #</td>
                                             <td>4</td>
                                         </tr>
                                     </tbody>
@@ -207,15 +224,30 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->            
+            <!-- /.row -->          
         </div>
         <!-- /#page-wrapper -->
 
+        <!-- Modal -->
+        <div id="editor" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Status and Controls</h4>
+                    </div>
+                    <div id="editor-body" class="modal-body">
+                    </div>
+                    <!-- /. Modal Body -->
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
     </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <!--Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -224,22 +256,92 @@
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+    <!-- DataTables Bootstrap JS -->
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <!-- DataTables Select JS -->    
+    <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
+
+    <!-- DataTables Buttons JS -->
+    <script src="../bower_components/datatables/media/js/dataTables.buttons.min.js"></script>
+
+    <!-- Redis Database Connection -->
+    <script src="../js/populateTable.js"></script>
+
+    <!-- Redis Database save-cancel-buttons -->
+    <script src="../js/save-cancel-buttons.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-    <!-- Connecting to JSON file -->
-    <!-- <script src="../js/main.js"></script> -->
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <!-- Shading Table Functions -->
     <script>
     $(document).ready(function() {
-        $('#shading-table').DataTable({
-                responsive: true,
-                //"ajax": "../api/data.txt"
-        });
+        
+        // roomsNewReq stores an array of rooms that have requested changes.
+        var roomsNewReq = [];
+
+        // load "Status and Control" form
+        $('#editor-body').load('table-responsive.html');
+
+        var t = $('#shading-table').DataTable( {
+            responsive: true,
+            select: {
+                style:    'multi',
+                selector: 'td:first-child'
+            },
+            order: [[ 1, 'asc' ]],
+            // Add 3 buttons
+            buttons: [
+                'selectAll',
+                'selectNone',
+                {
+                    text: 'Edit',
+                    action: function() {
+                        var roomsNewReq_temp = [];
+                        var selectData = t.rows({ selected: true }).data();
+                        for ( i=0; i<selectData.length; i++ ) {
+                            var value = selectData[i];
+                            roomsNewReq_temp.push(value[1]);
+                            roomsNewReq = roomsNewReq_temp;
+                        } // for loop
+                        console.log(roomsNewReq,'shading-tp');
+                    } // function()
+                }
+            ],
+            // Label the first two default buttons
+            language:{
+                buttons: {
+                    selectAll: 'Select All',
+                    selectNone: 'Deselect All'
+                }
+            },
+            // Added select checkboxes
+            columnDefs: [ {
+                orderable: false,
+                className: 'select-checkbox',
+                targets:   0
+            } ]
+        } );
+        // End of t = $('#shading-table').Datatable()
+
+        // Insert buttons after "Show X entries";
+        // dataTable.bootstrap.js has also been modified to "col-sm-2" and "col-sm-10"
+        t.buttons(0,null).container().appendTo('#shading-table_filter');
+
+        // Add "data-toggle='modal' and data-target='#editor'" to "Edit" button
+        $('a.dt-button:eq(2)').attr('data-toggle','modal');
+        $('a.dt-button:eq(2)').attr('data-target','#editor');
+
+        // var a = 101;
+        // for (i = 0; i < 25; i++)
+        // {
+        //     addToShadingTable(t,'1',a);
+        //     a = a + 1;
+        // }
+
     });
     </script>
 
