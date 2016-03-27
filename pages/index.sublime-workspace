@@ -1,0 +1,488 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"floor",
+				"floorplan"
+			],
+			[
+				"rect",
+				"rect3452"
+			],
+			[
+				"get",
+				"getString"
+			],
+			[
+				"data",
+				"dataType"
+			],
+			[
+				"td",
+				"td	Tag"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bacl",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables/media/css/select.dataTables.min.css",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js",
+		"/C/Users/Mingyi/Downloads/jquery.dataTables.min.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css",
+		"/C/Users/Mingyi/Downloads/dataTables.buttons.min.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/shading-fp.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/bootstrap-slider-master/dist/css/bootstrap-slider.css",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/bootstrap-slider-master/dist/bootstrap-slider.min.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/bootstrap-slider-master/dist/css/bootstrap-slider.min.css",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/forms.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/shading-tb.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/shading-fp.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-1st.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/datatables/media/css/jquery.dataTables.min.css",
+		"/C/Users/Mingyi/Downloads/jquery.dataTables.min.css",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/CIV300 Terrestial System/Tests/Test 2 lecture .txt",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-2nd.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-3rd.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-3new.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-3.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor2-new.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor1.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor2.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/shading-tb.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/shading-fp - original.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/index.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor3.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-1.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor-2.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/floor.js",
+		"/C/Users/Mingyi/Documents/GitHub/svg-map-tutorial-master/map.js",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE496 Capstone/Reference Graphs/floor-old-floorplan.js",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE496 Capstone/Reference Graphs/floorplan-1-plain.svg",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE496 Capstone/Reference Graphs/plain svg.svg",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/img/floor-svg.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/img/size in px.svg",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE496 Capstone/Reference Graphs/svg.svg",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE496 Capstone/[Archive]/2016-03-15 capstone/frontend/pages/shading-fp.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/js/morris-data.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/index.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/morris.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/main.py",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/api/data.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/pages/login.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/main.py",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/LICENSE",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/README.md",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/index.html",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/shading-tb.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/shading-fp.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/index-archived.html",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/README.md",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/shading-tb.html",
+		"/C/Users/Mingyi/Documents/GitHub/learn-git.txt",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/forms.html",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/shading-fp.html",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/js/main.js",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/api/data.js",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/bower_components/bootstrap-timepicker/css/timepicker.less",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/bower_components/jquery/dist/jquery.shading-fp.js",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/api/data.txt",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/pages/TEST.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/js/dataTable-init.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/js/main.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/main.py",
+		"/C/Users/Mingyi/Documents/GitHub/capstone/frontend/api/data2.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/api/data.json",
+		"/C/Users/Mingyi/Documents/GitHub/learn-jQuery+AJAX.txt",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/webdis/webdis.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/shading-tb.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/shading-fp.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/bower.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/data.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/HelloWorld.py",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/HelloWorld.py",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/index.tpl",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/index.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/shading-fp.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/index.html",
+		"/C/inetpub/wwwroot/pages/shading-fp.html",
+		"/C/Python34/README.txt",
+		"/C/inetpub/wwwroot/bower_components/jquery/dist/jquery.shading-fp.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/bower_components/jquery/dist/jquery.shading-fp.js",
+		"/C/inetpub/wwwroot/bower.json",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/shading-tb.html",
+		"/C/Users/Mingyi/Documents/GitHub/learn-jQuery+AJAX.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/TEST.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/tables.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/forms.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/buttons.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/bower_components/jquery/dist/jquery.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/bower_components/jquery/bower.json",
+		"/C/Users/Mingyi/Downloads/sample.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/grid.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/pages/panels-wells.html",
+		"/C/Users/Mingyi/Dropbox/yn2016.txt",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/dist/js/sb-admin-2.js",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-ACTIVE/js/flot-data.js",
+		"/C/Users/Mingyi/AppData/Local/Temp/wzaba6/license.txt",
+		"/C/Users/Mingyi/Downloads/License - READ THIS.txt",
+		"/C/Users/Mingyi/Downloads/redis-3.0/README.md",
+		"/C/Users/Mingyi/Downloads/redis-3.0/Redis on Windows.md",
+		"/C/Program Files/Redis/README.txt",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE417 Digial Communications/Lab 1/H.m.txt",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE417 Digial Communications/Lab 1/verne.txt",
+		"/C/Users/Mingyi/Dropbox/Skule - 2016-01 Winter/ECE417 Digial Communications/Lab 1/ToDecode.txt",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/dashboard-archived/index.html",
+		"/C/Users/Mingyi/Documents/GitHub/ece496/capstone/dashboard/admin/index.html",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/[Archive]/a3/results.txt",
+		"/C/Users/Mingyi/Downloads/test_a3.sh",
+		"/C/Users/Mingyi/Downloads/A3_testsets.zip",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/[Archive]/a3/movies.dtd",
+		"/C/Users/Mingyi/AppData/Local/Temp/Temp1_A3_queries.zip/A3_queries/q7.xq",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC418 Computer Graphics/Lecture Notes/11-18 Notes.txt",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/[Archive]/a2/Assignment2.java",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/Finals/2014_12_q12.xml",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/Finals/2014_12_q11.xml",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/Finals/2015_04_q7.xml",
+		"/C/Users/Mingyi/Dropbox/Skule - 2015-09 Fall/CSC343 Database/a2/Assignment2.java"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"select",
+			"script",
+			"buttons",
+			"datatables",
+			"col-",
+			"length",
+			"show",
+			"entries",
+			"show",
+			"script",
+			"dt-button",
+			"buttons",
+			"datatables.bootstrap",
+			"buttons",
+			"datatables",
+			"wrapper",
+			"BUTTONS",
+			"datatables",
+			"buttons",
+			"button",
+			"buttons",
+			"button",
+			"datatables",
+			"room",
+			"slider",
+			"timepicker",
+			"alarm",
+			"#",
+			"89cdef",
+			"81bfde",
+			"89cdef",
+			"color",
+			"timepicker",
+			"style",
+			"static",
+			"facing",
+			"head",
+			"105",
+			"shading-table",
+			"head",
+			"line",
+			"jquery.datatables",
+			"JQUERY.datatables",
+			"jquery",
+			"shading-table",
+			"datatables.",
+			"floor",
+			"floorplan",
+			"floor-1st",
+			"floor2",
+			"floor1",
+			"105",
+			"106",
+			"105",
+			"floor1.js",
+			"floor2",
+			"floorplan",
+			"<div id='",
+			"floor2",
+			"floor-",
+			"floor-1",
+			"floor-2",
+			"floor-3",
+			"floorplan",
+			"floor-1",
+			"floorplan",
+			"106",
+			"'rm",
+			"floor1-",
+			"101",
+			"63.692101",
+			"113",
+			"25px",
+			"20px",
+			"37.59051132px",
+			"rect3454",
+			"rect3431",
+			"rect3427",
+			"rect3425",
+			"rect3421",
+			"rect3419",
+			"rect3417",
+			"path3415",
+			"rm10",
+			"rm103",
+			"raph",
+			"path3413",
+			"rect3405",
+			"rect3403",
+			"rect3380",
+			"rect3362",
+			"rect3364",
+			"rect3366",
+			"rect3360",
+			"rect3358",
+			"rect3356",
+			"id",
+			"id:",
+			"id",
+			"layer1",
+			"heaven",
+			"id:",
+			"id",
+			"id:",
+			"',\n",
+			"\n    id: 'rect4274',\n    parent: 'layer1',",
+			"timepicker",
+			"width",
+			"room",
+			"floor1",
+			"floor",
+			"morris-bar",
+			"morris",
+			"are",
+			"area",
+			"morris-",
+			"morris-area",
+			"morris",
+			"bar-chart",
+			"bar",
+			"morris",
+			".html",
+			"('/",
+			".html",
+			"shading",
+			"\"/",
+			"\"/in",
+			"\"/\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ad3a93",
+			"337ab7",
+			"floor2",
+			"floorplan",
+			"floor1",
+			"floor2",
+			"floor3",
+			"floor-3",
+			"floor-2",
+			"floor-1",
+			"83",
+			"22px",
+			"25px",
+			"20px",
+			"rm113",
+			"rm124",
+			"rm122",
+			"rm121",
+			"rm117",
+			"rm118",
+			"elevators",
+			"rm103",
+			"rm102",
+			"rm115",
+			"rm114",
+			"rm105",
+			"rm110",
+			"rm111",
+			"rm112",
+			"rm109",
+			"rm108",
+			"rm107"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

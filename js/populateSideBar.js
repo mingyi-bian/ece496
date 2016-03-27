@@ -53,8 +53,7 @@ function populateSidebar(Floor, RoomNumber){
                                            $("#Tilt2").prop("checked", false);
                                            $("#Tilt3").prop("checked", false);
                                            $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", false);
+                                           
                                         }
                                         else if (value == '1'){
                                            $("#Tilt0").prop("checked", false);
@@ -62,8 +61,7 @@ function populateSidebar(Floor, RoomNumber){
                                            $("#Tilt2").prop("checked", false);
                                            $("#Tilt3").prop("checked", false);
                                            $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", false);
+                                          
                                         }
                                         else if (value == '2'){
                                            $("#Tilt0").prop("checked", false);
@@ -71,8 +69,7 @@ function populateSidebar(Floor, RoomNumber){
                                            $("#Tilt2").prop("checked", true);
                                            $("#Tilt3").prop("checked", false);
                                            $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", false);
+                                           
                                         }
                                         else if (value == '3'){
                                            $("#Tilt0").prop("checked", false);
@@ -80,8 +77,7 @@ function populateSidebar(Floor, RoomNumber){
                                            $("#Tilt2").prop("checked", false);
                                            $("#Tilt3").prop("checked", true);
                                            $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", false);
+                                         
                                         }
                                         else if (value == '4'){
                                            $("#Tilt0").prop("checked", false);
@@ -89,30 +85,9 @@ function populateSidebar(Floor, RoomNumber){
                                            $("#Tilt2").prop("checked", false);
                                            $("#Tilt3").prop("checked", false);
                                            $("#Tilt4").prop("checked", true);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", false);
-                                        }
-                                        else if (value == '5'){
-                                            $("#Tilt0").prop("checked", false);
-                                           $("#Tilt1").prop("checked", false);
-                                           $("#Tilt2").prop("checked", false);
-                                           $("#Tilt3").prop("checked", false);
-                                           $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", true);
-                                           $("#Tilt6").prop("checked", false);
-                                        }
-                                        else if (value == '6'){
-                                           $("#Tilt0").prop("checked", false);
-                                           $("#Tilt1").prop("checked", false);
-                                           $("#Tilt2").prop("checked", false);
-                                           $("#Tilt3").prop("checked", false);
-                                           $("#Tilt4").prop("checked", false);
-                                           $("#Tilt5").prop("checked", false);
-                                           $("#Tilt6").prop("checked", true);
+                                          
                                         }
                                     }
-
-                                 
                                 });
                             }
                         })
