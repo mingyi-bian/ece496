@@ -185,7 +185,7 @@
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                   <!--  <tbody>
                                         <tr>
                                             <td></td>
                                             <td>101</td>
@@ -208,7 +208,7 @@
                                             <td>Light #</td>
                                             <td>4</td>
                                         </tr>
-                                    </tbody>
+                                    </tbody> -->
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
@@ -280,8 +280,7 @@
     <script>
     $(document).ready(function() {
         
-        // roomsNewReq stores an array of rooms that have requested changes.
-        var roomsNewReq = [];
+
 
         // load "Status and Control" form
         $('#editor-body').load('table-responsive.html');
@@ -300,12 +299,16 @@
                 {
                     text: 'Edit',
                     action: function() {
+                        // roomsNewReq stores an array of rooms that have requested changes.
+                        var roomsNewReq = [];
                         var selectData = t.rows({ selected: true }).data();
                         for ( i=0; i<selectData.length; i++ ) {
                             var value = selectData[i];
                             roomsNewReq.push(value[1]);
-                            // console.log(roomsNewReq);
+                            console.log(selectData[i]);
                         } // for loop
+                    console.log(roomsNewReq);
+
                     } // function()
                 }
             ],
@@ -325,6 +328,8 @@
         } );
         // End of t = $('#shading-table').Datatable()
 
+      
+
         // Insert buttons after "Show X entries";
         // dataTable.bootstrap.js has also been modified to "col-sm-2" and "col-sm-10"
         t.buttons(0,null).container().appendTo('#shading-table_filter');
@@ -333,10 +338,15 @@
         $('a.dt-button:eq(2)').attr('data-toggle','modal');
         $('a.dt-button:eq(2)').attr('data-target','#editor');
 
+
+        RoomNumber = 101;
+        Floor= 1;
+
+
         var a = 101;
         for (i = 0; i < 25; i++)
         {
-            addToShadingTable('1',a);
+            addToShadingTable(t,'1',a);
             a = a + 1;
         }
 
