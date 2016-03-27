@@ -229,117 +229,16 @@
         <!-- /#page-wrapper -->
 
         <!-- Modal -->
-        <div class="modal fade" id="editor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div id="editor" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Status and Controls</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Parameter</th>
-                                        <th>Controls</th>
-                                    </tr>
-                                </thead>
-                                <!-- /.thead -->
-                                <tbody>
-                                    <tr>
-                                        <td id="room">Room</td>
-                                        <td>
-                                            <p id = "RoomTextbox" class="radio-inline" style="padding-left: 0px">101</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="facing">Facing</td>
-                                        <td>
-                                            <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">West</p>
-                                        </td>
-                                    </tr>
-                                    <!-- /.tr -->
-                                    <tr>
-                                        <td>Occupancy</td>
-                                        <td>
-                                            <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineYes" value="option1">Yes
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineNo" value="option2">No
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <!-- /.tr -->
-                                    <tr>
-                                        <td>Mode</td>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineMan" value="option1">Manual
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineAuto" value="option2">Auto
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <!-- /.tr -->
-                                    <tr>
-                                        <td>Temperature</td>
-                                        <td>
-                                            <p id="temperature" class="radio-inline" style="padding-left: 0px">in C</p>
-                                        </td>
-                                    </tr>
-                                    <!-- /.tr -->
-                                        <tr>
-                                        <td>Light Level</td>
-                                        <td>
-                                            <p id="light" class="radio-inline" style="padding-left: 0px">in Lux</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Blind Tilt</td>
-                                        <td>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="Tilt0" value="option0">0/4 (Open)
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/4
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/4
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/4
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/4 (Closed)
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.tr -->
-                                </tbody>
-                                <!-- /.tbody -->
-                            </table>
-                            <!-- /.table -->
-                        </div>
-                        <!-- /.table-responsive -->
+                    <div id="editor-body" class="modal-body">
                     </div>
-                    <!-- Modal Body -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                    <!-- /. Modal Body -->
                 </div>
             </div>
         </div>
@@ -379,41 +278,58 @@
 
     <!-- Shading Table Functions -->
     <script>
-    
     $(document).ready(function() {
+        
+        // roomsNewReq stores an array of rooms that have requested changes.
+        var roomsNewReq = [];
+
+        // load "Status and Control" form
+        $('#editor-body').load('table-responsive.html');
+
         var t = $('#shading-table').DataTable( {
-            buttons: [
-                'selectAll',
-                'selectNone',
-                {
-                    text: 'Edit'
-                }
-            ],
-            language:{
-                buttons: {
-                    selectAll: "Select All",
-                    selectNone: "Deselect All"
-                }
-            },
             responsive: true,
-            columnDefs: [ {
-                orderable: false,
-                className: 'select-checkbox',
-                targets:   0
-            } ],
             select: {
                 style:    'multi',
                 selector: 'td:first-child'
             },
-            order: [[ 1, 'asc' ]]
+            order: [[ 1, 'asc' ]],
+            // Add 3 buttons
+            buttons: [
+                'selectAll',
+                'selectNone',
+                {
+                    text: 'Edit',
+                    action: function() {
+                        var selectData = t.rows({ selected: true }).data();
+                        for ( i=0; i<selectData.length; i++ ) {
+                            var value = selectData[i];
+                            roomsNewReq.push(value[1]);
+                            // console.log(roomsNewReq);
+                        } // for loop
+                    } // function()
+                }
+            ],
+            // Label the first two default buttons
+            language:{
+                buttons: {
+                    selectAll: 'Select All',
+                    selectNone: 'Deselect All'
+                }
+            },
+            // Added select checkboxes
+            columnDefs: [ {
+                orderable: false,
+                className: 'select-checkbox',
+                targets:   0
+            } ]
         } );
-        // End of t = $('#shading-table')
+        // End of t = $('#shading-table').Datatable()
 
         // Insert buttons after "Show X entries";
         // dataTable.bootstrap.js has also been modified to "col-sm-2" and "col-sm-10"
         t.buttons(0,null).container().appendTo('#shading-table_filter');
 
-        // Add "data-toggle='modal'" to "Edit" button
+        // Add "data-toggle='modal' and data-target='#editor'" to "Edit" button
         $('a.dt-button:eq(2)').attr('data-toggle','modal');
         $('a.dt-button:eq(2)').attr('data-target','#editor');
 
@@ -425,8 +341,6 @@
         }
 
     });
-    
-
     </script>
 
 </body>

@@ -1,8 +1,8 @@
-$(document).ready(function(){
-    
+$(document).ready(function() {
+
     $('#cancelButton').click(function() {
 
-        var value = $('#RoomTextbox').val();
+        var value = $('#roomTextbox').val();
         console.log(value);
 
         if (value != null){
@@ -16,6 +16,7 @@ $(document).ready(function(){
 
     $('#saveButton').click(function() {
 
+
           var pushInformation = [];
 
         //Get all values from the boxes
@@ -25,6 +26,31 @@ $(document).ready(function(){
         // Need to circulate through an array of rooms!
         pushInformation.push($('#RoomTextbox').html());
         
+
+        // Get all values from the boxes
+        // Push the changes 
+
+        // To-Do:
+        // Need to circulate through an array of rooms!
+        // pushInformation.push($('#roomTextbox').val());
+        pushInformation.push($('#facingTextbox').val());
+        if($('#optionsRadiosInlineYes').is(':checked')){
+            pushInformation.push("Yes");
+        }
+        else{
+            pushInformation.push("No");
+        }
+
+        if($('#optionsRadiosInlineAuto').is(':checked')){
+            pushInformation.push("Auto");
+        } 
+        else {
+            pushInformation.push("Manual");
+        }
+
+        pushInformation.push($('#temperature').val());
+        pushInformation.push($('#light').val());
+
         if($('#Tilt0').is(':checked')){
             pushInformation.push("0");
         } 
