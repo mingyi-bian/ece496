@@ -41,13 +41,14 @@ def home():
 def home():
 	return template("pages/shading-tb.tpl")
 
+@route('/pages/table-responsive.html')
+def home():
+	return template("pages/table-responsive.tpl")
+
 @route('/pages/login.html')
 def home():
 	return template("pages/login.tpl")
 
-@route('/api/data')
-def home():
-	return template("api/data.js")
 # end of routing pages
 
 run(host='localhost', port=8000, debug=True)

@@ -1,8 +1,8 @@
-$(document).ready(function(){
-    
+$(document).ready(function() {
+
     $('#cancelButton').click(function() {
 
-        var value = $('#RoomTextbox').val();
+        var value = $('#roomTextbox').val();
         console.log(value);
 
         if (value != null){
@@ -16,12 +16,12 @@ $(document).ready(function(){
 
     $('#saveButton').click(function() {
 
-        //Get all values from the boxes
-        //Push the changes 
+        // Get all values from the boxes
+        // Push the changes 
 
         // To-Do:
         // Need to circulate through an array of rooms!
-        // pushInformation.push($('#RoomTextbox').val());
+        // pushInformation.push($('#roomTextbox').val());
         pushInformation.push($('#facingTextbox').val());
         if($('#optionsRadiosInlineYes').is(':checked')){
             pushInformation.push("Yes");

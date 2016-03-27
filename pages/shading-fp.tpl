@@ -192,109 +192,9 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Parameter</th>
-                                            <th>Controls</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- /.thead -->
-                                    <tbody>
-                                        <tr>
-                                            <td id="room">Room</td>
-                                            <td>
-                                                <p id = "RoomTextbox" class="radio-inline" style="padding-left: 0px">101</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td id="facing">Facing</td>
-                                            <td>
-                                                <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">West</p>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Occupancy</td>
-                                            <td>
-                                                <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineYes" value="option1">Yes
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineYesNo" id="optionsRadiosInlineNo" value="option2">No
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Mode</td>
-                                            <td>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineMan" value="option1">Manual
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInlineManAuto" id="optionsRadiosInlineAuto" value="option2">Auto
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Temperature</td>
-                                            <td>
-                                                <p id="temperature" class="radio-inline" style="padding-left: 0px">in C</p>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                            <tr>
-                                            <td>Light Level</td>
-                                            <td>
-                                                <p id="light" class="radio-inline" style="padding-left: 0px">in Lux</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Blind Tilt</td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt0" value="option0" checked>0/4 (Open)
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt1" value="option1">1/4
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/4
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt3" value="option3">3/4
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/4 (Closed)
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                    </tbody>
-                                    <!-- /.tbody -->
-                                </table>
-                                <!-- /.table -->
-                                <div class="col-md-3 col-md-offset-2">
-                                    <button id="cancelButton" type="button" class="btn btn-default">Cancel</button>
-                                </div>
-                                <div class="col-md-3">
-                                    <button id="saveButton" type="button" class="btn btn-primary">Save Changes</button>
-                                </div>
+                            <div id="editor-body">
                             </div>
-                            <!-- /.table-responsive -->
+                            <!-- /. Body -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -339,15 +239,17 @@
     <script type="text/javascript">
 	$(document).ready(function(){
 
+        // load "Status and Control" form
+        $('#editor-body').load('table-responsive.html');
+
         // Floor Plans
 		$("#floor1-caret").click(function(){
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
-            $.getScript('../js/floor-1st.js');
         });
 
         $("#floor2-caret").click(function(){
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
-            $.getScript('../js/floor-2nd.js');
+            // $.getScript('../js/floor-2nd.js');
 		});
 
         $("#floor3-caret").click(function(){
