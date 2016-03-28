@@ -14,51 +14,51 @@ $(document).ready(function() {
 
     $('#saveButton').click(function() {
 
-        var pushInformation = [];
+        var rooms = $('#roomTextbox').html().split(", ");
 
-        //Get all values from the boxes
-        //Push the changes 
+        for (i = 0; i < rooms.length; i++){
+            var pushInformation = [];
+            
+            pushInformation.push(rooms[i]);
 
-        // To-Do:
-        // Need to circulate through an array of rooms!
-        pushInformation.push($('#roomTextbox').html());
+            pushInformation.push($('#facingTextbox').html());
 
-        pushInformation.push($('#facingTextbox').html());
+            if($('#optionsRadiosInlineYes').is(':checked')){
+                pushInformation.push("Yes");
+            }
+            else{
+                pushInformation.push("No");
+            }
 
-        if($('#optionsRadiosInlineYes').is(':checked')){
-            pushInformation.push("Yes");
+            if($('#optionsRadiosInlineAuto').is(':checked')){
+                pushInformation.push("Auto");
+            } 
+            else {
+                pushInformation.push("Manual");
+            }
+
+            pushInformation.push($('#temperature').html());
+            pushInformation.push($('#light').html());
+
+            if($('#Tilt0').is(':checked')){
+                pushInformation.push("0");
+            } 
+            else if($('#Tilt1').is(':checked')){
+                pushInformation.push("1");
+            } 
+            else if($('#Tilt2').is(':checked')){
+                pushInformation.push("2");
+            } 
+            else if($('#Tilt3').is(':checked')){
+                pushInformation.push("3");
+            } 
+            else if($('#Tilt4').is(':checked')){
+                pushInformation.push("4");
+            }
+            //console.log("PUSH INFO" + pushInformation);   
+            pushUserInfo(pushInformation);
+>>>>>>> 1c57bf6c9862fc2553a994ef3cd9c0a4b972c757
         }
-        else{
-            pushInformation.push("No");
-        }
-
-        if($('#optionsRadiosInlineAuto').is(':checked')){
-            pushInformation.push("Auto");
-        } 
-        else {
-            pushInformation.push("Manual");
-        }
-
-        pushInformation.push($('#temperature').html());
-        pushInformation.push($('#light').html());
-
-        if($('#Tilt0').is(':checked')){
-            pushInformation.push("0");
-        } 
-        else if($('#Tilt1').is(':checked')){
-            pushInformation.push("1");
-        } 
-        else if($('#Tilt2').is(':checked')){
-            pushInformation.push("2");
-        } 
-        else if($('#Tilt3').is(':checked')){
-            pushInformation.push("3");
-        } 
-        else if($('#Tilt4').is(':checked')){
-            pushInformation.push("4");
-        }
-        console.log(pushInformation);   
-        pushUserInfo(pushInformation);
     });
     // /. saveButton
 });

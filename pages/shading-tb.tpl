@@ -185,7 +185,7 @@
                                             <th>Tilt</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <!-- <tbody>
                                         <tr>
                                             <td></td>
                                             <td>101</td>
@@ -208,7 +208,7 @@
                                             <td>Light #</td>
                                             <td>4</td>
                                         </tr>
-                                    </tbody>
+                                    </tbody> -->
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
@@ -274,11 +274,15 @@
     <!-- Redis Database Connection -->
     <script src="../js/populateTable.js"></script>
 
+    <script src="../js/populateSideBar.js"></script>
+
     <!-- Redis Database save-cancel-buttons -->
     <script src="../js/save-cancel-buttons.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <script src="../js/pushUserInfo.js"></script>
 
     <!-- Shading Table Functions -->
     <script>
@@ -287,6 +291,7 @@
         // load "Status and Control" form
         $('#editor-body').load('table-responsive.html');
 
+        var roomsNewReq =[]
         var t = $('#shading-table').DataTable( {
             responsive: true,
             select: {
@@ -301,13 +306,17 @@
                 {
                     text: 'Edit',
                     action: function() {
-                        var roomsNewReq_temp = [];
+                        var roomsNewReq_temp = [];  
                         var selectData = t.rows({ selected: true }).data();
                         for ( i=0; i<selectData.length; i++ ) {
                             var value = selectData[i];
                             roomsNewReq_temp.push(value[1]);
-                            roomsNewReq = roomsNewReq_temp;
+                            //roomsNewReq = roomsNewReq_temp;
                         } // for loop
+                        console.log(roomsNewReq_temp,'shading-tp');
+                        if (roomsNewReq_temp.length != 0){
+                             populateSidebarMulti("1", roomsNewReq_temp);
+                        }
                     } // function()
                 }
             ],
@@ -335,12 +344,12 @@
         $('a.dt-button:eq(2)').attr('data-toggle','modal');
         $('a.dt-button:eq(2)').attr('data-target','#editor');
 
-        // var a = 101;
-        // for (i = 0; i < 25; i++)
-        // {
-        //     addToShadingTable(t,'1',a);
-        //     a = a + 1;
-        // }
+        var a = 101;
+        for (i = 0; i < 25; i++)
+        {
+            addToShadingTable(t,'1',a);
+            a = a + 1;
+        }
 
     });
     </script>
