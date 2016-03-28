@@ -165,8 +165,7 @@
                                     <i class="fa fa-lightbulb-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>Lighting</div>
+                                    <h2>Lighting</h2>
                                 </div>
                             </div>
                         </div>
@@ -180,19 +179,19 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-sun-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>Shading</div>
+                    <a href="shading-fp.html">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-sun-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <h2>Shading</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <a href="shading-fp.html">
+                        
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -209,8 +208,7 @@
                                     <i class="fa fa-th-large fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>AHU</div>
+                                    <h2>AHU</h2>
                                 </div>
                             </div>
                         </div>
@@ -231,8 +229,7 @@
                                     <i class="fa fa-video-camera fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>CCTV</div>
+                                    <h2>CCTV</h2>
                                 </div>
                             </div>
                         </div>
