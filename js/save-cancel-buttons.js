@@ -57,7 +57,6 @@ $(document).ready(function() {
             }
             //console.log("PUSH INFO" + pushInformation);   
             pushUserInfo(pushInformation);
->>>>>>> 1c57bf6c9862fc2553a994ef3cd9c0a4b972c757
         }
     });
     // /. saveButton
