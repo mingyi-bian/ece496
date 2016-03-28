@@ -12,11 +12,12 @@ $(document).ready(function() {
     });
     // /. cancelButton
 
-  
-
     $('#saveButton').click(function() {
 
+
+
         var pushInformation = [];
+
 
         //Get all values from the boxes
         //Push the changes 
@@ -26,13 +27,17 @@ $(document).ready(function() {
         pushInformation.push($('#roomTextbox').html());
         
 
+
         // Get all values from the boxes
         // Push the changes 
 
         // To-Do:
         // Need to circulate through an array of rooms!
         // pushInformation.push($('#roomTextbox').val());
+
+
         pushInformation.push($('#facingTextbox').html());
+
         if($('#optionsRadiosInlineYes').is(':checked')){
             pushInformation.push("Yes");
         }

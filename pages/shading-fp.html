@@ -23,14 +23,8 @@
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Timepicker -->
-    <link href="../bower_components/bootstrap-timepicker/css/timepicker.less"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -182,11 +176,6 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <!-- <div id="floorplan" style="border: 2px solid black">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <embed class="embed-responsive-item" src="../img/floor-1.png"></embed>
-                                </div>
-                            </div> -->
                             <div id="floorplan">
                                 <!-- Raphael JS Map Here -->
                             </div>
@@ -203,115 +192,11 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Parameter</th>
-                                            <th>Controls</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- /.thead -->
-                                    <tbody>
-                                        <tr>
-                                            <td id="room">Room</td>
-                                            <td>
-                                                <input class="form-control" placeholder="Enter Room Number">
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Occupancy</td>
-                                            <td>
-                                                <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline1" value="option1" checked>Yes
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline1" id="optionsRadiosInline2" value="option2">No
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Mode</td>
-                                            <td>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline1" value="option1" checked>Manual
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="optionsRadiosInline2" id="optionsRadiosInline2" value="option2">Auto
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Alarm Request</td>
-                                            <td>
-                                                <div class="input-group bootstrap-timepicker timepicker">
-                                                    <input id="timepicker1" type="text" class="form-control input-small">
-                                                    <!-- Icon for time input -->
-                                                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span> -->
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Temperature</td>
-                                            <td>
-                                                <input class="form-control" placeholder="Between 18-23 deg C" type="number" id="replyNumber" min="18" step="0.5" max="23" data-bind="value:replyNumber" />
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                        <tr>
-                                            <td>Blind Tilt</td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option0" checked>0/5 (Open)
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">1/5
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">2/5
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">3/5
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">4/5
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">5/5 (Closed)
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- /.tr -->
-                                    </tbody>
-                                    <!-- /.tbody -->
-                                </table>
-                                <!-- /.table -->
-                                <div class="col-md-3 col-md-offset-3">
-                                    <button id="save-fp" type="button" class="btn btn-primary">Save</button>
-                                </div>
-                                <!-- /.col-md-3 col-md-offset-2 -->
-                                <div class="col-md-3">
-                                    <button type="button" class="btn btn-default">Cancel</button>
-                                </div>
-                                <!-- /.col-md-3 col-md-offset-2 -->
+
+                            <div id="editor-body">
+
                             </div>
-                            <!-- /.table-responsive -->
+                            <!-- /. Body -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -326,16 +211,13 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Timepicker -->
-    <script src="../bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script></script> -->
 
     <!-- Raphael -->
     <script src="../bower_components/raphael/raphael.js"></script>
-    <script id "floor-js" src="../js/floor1.js"></script>
-    <!-- <script src="../js/floor2.js"></script> -->
-    <!-- <script src="../js/floor3.js"></script> -->
+    <script id="floor1js" src="../js/floor-1st.js"></script>
+    <!-- <script src="../js/floor-2nd.js"></script> -->
+    <!-- <script src="../js/floor-3rd.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -346,30 +228,46 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
-    <!-- Floor Plans -->
+    <!-- Populate Sidebar -->
+    <script src="../js/populateSideBar.js"></script>
+
+    <!-- User Push -->
+    <script src="../js/pushUserInfo.js"></script>
+
+    <!-- Redis Database save-cancel-buttons -->
+    <script src="../js/save-cancel-buttons.js"></script>
+
+    <!-- Misc. Functions -->
     <script type="text/javascript">
     $(document).ready(function(){
+
+        // load "Status and Control" form
+        $('#editor-body').load('table-responsive.html');
+
+        // Floor Plans
         $("#floor1-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor1.js');
             $("#floor-display").html("Floor 1 <span class='caret'></span>");
         });
 
         $("#floor2-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor2.js');
             $("#floor-display").html("Floor 2 <span class='caret'></span>");
+            // $.getScript('../js/floor-2nd.js');
         });
 
         $("#floor3-caret").click(function(){
-            $('#floor-js').attr('src', '../js/floor3.js');
             $("#floor-display").html("Floor 3 <span class='caret'></span>");
-        });
+        });  
+
     });
     </script>
 
-    <!-- Timepicker -->
+
+
+    <!-- Redis Database -->
     <script type="text/javascript">
     $(document).ready(function(){
-        $('#timepicker1').timepicker();
+        
+
     });
     </script>
 
