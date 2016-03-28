@@ -192,11 +192,14 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-
                             <div id="editor-body">
-
                             </div>
                             <!-- /. Body -->
+                            <div class="modal-footer">
+                                <button id="cancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button id="saveButton" type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                            <!-- /. Footer -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -259,16 +262,6 @@
 
 	});
 	</script>
-
-
-
-    <!-- Redis Database -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        
-
-    });
-    </script>
 
 </body>
 

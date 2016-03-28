@@ -11,13 +11,13 @@
             <tr>
                 <td id="room">Room</td>
                 <td>
-                    <p id = "roomTextbox" class="radio-inline" style="padding-left: 0px">101</p>
+                    <p id = "roomTextbox" class="radio-inline" style="padding-left: 0px">[Room Number]</p>
                 </td>
             </tr>
             <tr>
                 <td id="facing">Facing</td>
                 <td>
-                    <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">West</p>
+                    <p id = "facingTextbox" class="radio-inline" style="padding-left: 0px">[Direction]</p>
                 </td>
             </tr>
             <!-- /.tr -->
@@ -48,14 +48,14 @@
             <tr>
                 <td>Temperature</td>
                 <td>
-                    <p id="temperature" class="radio-inline" style="padding-left: 0px">in C</p>
+                    <p id="temperature" class="radio-inline" style="padding-left: 0px">[Celcius]</p>
                 </td>
             </tr>
             <!-- /.tr -->
                 <tr>
                 <td>Light Level</td>
                 <td>
-                    <p id="light" class="radio-inline" style="padding-left: 0px">in Lux</p>
+                    <p id="light" class="radio-inline" style="padding-left: 0px">[Analog Value]</p>
                 </td>
             </tr>
             <tr>
@@ -92,16 +92,6 @@
         </tbody>
         <!-- /.tbody -->
     </table>
-    
-
     <!-- /.table -->
-    <div class="modal-footer">
-        <button id="cancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button id="saveButton" type="button" class="btn btn-primary">Save changes</button>
-    </div>
 </div>
 <!-- /.table-responsive -->
-
-
-<!-- Redis Database save-cancel-buttons -->
-<script src="../js/save-cancel-buttons.js"></script>

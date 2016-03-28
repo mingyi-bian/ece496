@@ -239,6 +239,10 @@
                     <div id="editor-body" class="modal-body">
                     </div>
                     <!-- /. Modal Body -->
+                    <div class="modal-footer">
+                        <button id="cancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button id="saveButton" type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -304,7 +308,6 @@
                             roomsNewReq_temp.push(value[1]);
                             roomsNewReq = roomsNewReq_temp;
                         } // for loop
-                        console.log(roomsNewReq,'shading-tp');
                     } // function()
                 }
             ],
