@@ -92,6 +92,8 @@
         </tbody>
         <!-- /.tbody -->
     </table>
+    
+
     <!-- /.table -->
     <div class="modal-footer">
         <button id="cancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -99,3 +101,7 @@
     </div>
 </div>
 <!-- /.table-responsive -->
+
+
+<!-- Redis Database save-cancel-buttons -->
+<script src="../js/save-cancel-buttons.js"></script>

@@ -16,8 +16,7 @@ $(document).ready(function() {
 
     $('#saveButton').click(function() {
 
-
-          var pushInformation = [];
+        var pushInformation = [];
 
         //Get all values from the boxes
         //Push the changes 
@@ -33,23 +32,23 @@ $(document).ready(function() {
         // To-Do:
         // Need to circulate through an array of rooms!
         // pushInformation.push($('#roomTextbox').val());
-        // pushInformation.push($('#facingTextbox').val());
-        // if($('#optionsRadiosInlineYes').is(':checked')){
-        //     pushInformation.push("Yes");
-        // }
-        // else{
-        //     pushInformation.push("No");
-        // }
+        pushInformation.push($('#facingTextbox').html());
+        if($('#optionsRadiosInlineYes').is(':checked')){
+            pushInformation.push("Yes");
+        }
+        else{
+            pushInformation.push("No");
+        }
 
-        // if($('#optionsRadiosInlineAuto').is(':checked')){
-        //     pushInformation.push("Auto");
-        // } 
-        // else {
-        //     pushInformation.push("Manual");
-        // }
+        if($('#optionsRadiosInlineAuto').is(':checked')){
+            pushInformation.push("Auto");
+        } 
+        else {
+            pushInformation.push("Manual");
+        }
 
-        // pushInformation.push($('#temperature').val());
-        // pushInformation.push($('#light').val());
+        pushInformation.push($('#temperature').html());
+        pushInformation.push($('#light').html());
 
         if($('#Tilt0').is(':checked')){
             pushInformation.push("0");
