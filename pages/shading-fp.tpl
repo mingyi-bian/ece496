@@ -158,7 +158,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-th fa-fw"></i> Floor Plan / <a href="shading-tb.html">Tabular View</a>
-                            <div class="pull-right">
+                            <!-- <div class="pull-right">
                                 <div class="btn-group">
                                     <button id="floor-display" type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                         Floor 1
@@ -172,7 +172,7 @@
                                         <li id="floor3-caret"><a href="#">Floor 3</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -245,18 +245,17 @@
         $('#editor-body').load('table-responsive.html');
 
         // Floor Plans
-		$("#floor1-caret").click(function(){
-            $("#floor-display").html("Floor 1 <span class='caret'></span>");
-        });
+		// $("#floor1-caret").click(function(){
+  //           $("#floor-display").html("Floor 1 <span class='caret'></span>");
+  //       });
 
-        $("#floor2-caret").click(function(){
-            $("#floor-display").html("Floor 2 <span class='caret'></span>");
-            // $.getScript('../js/floor-2nd.js');
-		});
+  //       $("#floor2-caret").click(function(){
+  //           $("#floor-display").html("Floor 2 <span class='caret'></span>");
+		// });
 
-        $("#floor3-caret").click(function(){
-            $("#floor-display").html("Floor 3 <span class='caret'></span>");
-        });  
+  //       $("#floor3-caret").click(function(){
+  //           $("#floor-display").html("Floor 3 <span class='caret'></span>");
+  //       });  
 
 	});
 	</script>
