@@ -63,7 +63,7 @@
                 <td>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="Tilt0" value="option0">0/4 (Open)
+                            <input type="radio" name="optionsRadios" id="Tilt0" value="option0">0/4 (Closed/Up)
                         </label>
                     </div>
                     <div class="radio">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/4
+                            <input type="radio" name="optionsRadios" id="Tilt2" value="option2">2/4 (Open)
                         </label>
                     </div>
                     <div class="radio">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/4 (Closed)
+                            <input type="radio" name="optionsRadios" id="Tilt4" value="option4">4/4 (Closed/Down)
                         </label>
                     </div>
                 </td>
