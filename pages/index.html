@@ -248,8 +248,8 @@
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Monthly Energy Consumption
-                            <div class="pull-right">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Monthly Energy Consumption (Ton)
+                            <!-- <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                         Total Energy
@@ -265,7 +265,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -357,37 +357,38 @@
         Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            y: 'Jan',  a: 100, b: 90
+            y: 'Jan',  a: 2950, b: 770
         }, {
-            y: 'Feb',  a: 75,  b: 65
+            y: 'Feb',  a: 3049,  b: 610
         }, {
-            y: 'Mar',  a: 50,  b: 40
+            y: 'Mar',  a: 1405,  b: 421
         }, {
-            y: 'Apr',  a: 75,  b: 65
+            y: 'Apr',  a: 1503,  b: 451
         }, {
-            y: 'May',  a: 50,  b: 40
+            y: 'May',  a: 840,  b: 1008
         }, {
-            y: 'Jun',  a: 75,  b: 65
+            y: 'Jun',  a: 594,  b: 1455
         }, {
-            y: 'Jul',  a: 100, b: 90
+            y: 'Jul',  a: 485, b: 1455
         }, {
-            y: 'Aug',  a: 75,  b: 65
+            y: 'Aug',  a: 409,  b: 1636
         }, {
-            y: 'Sep',  a: 50,  b: 40
+            y: 'Sep',  a: 580,  b: 1160
         }, {
-            y: 'Oct',  a: 75,  b: 65
+            y: 'Oct',  a: 1305,  b: 1055
         }, {
-            y: 'Nov',  a: 50,  b: 40
+            y: 'Nov',  a: 1945,  b: 584
         }, {
-            y: 'Dec',  a: 75,  b: 65
+            y: 'Dec',  a: 2506,  b: 501
         }],
         xkey: 'y',
         ykeys: ['a', 'b'],
-        labels: ['Heating-Electric', 'Heating-Gas','Cooling', 'Other'],
-        barColors: ['#D9534F','#F0AD4E','#337AB7','#5CB85C'], // Red, Yellow, Blue, Green
+        labels: ['Gas (Ton)', 'Electric (Ton)', 'Other'],
+        barColors: ['#F0AD4E','#D9534F','#337AB7','#5CB85C'], // Red, Yellow, Blue, Green
         hideHover: 'auto',
         stacked: true,
-        resize: true
+        resize: true,
+        axes: true
     });
     </script>
 
