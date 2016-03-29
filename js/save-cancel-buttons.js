@@ -61,6 +61,8 @@ $(document).ready(function() {
             }
             //console.log("PUSH INFO" + pushInformation);   
             pushUserInfo(pushInformation);
+
+
         }
     });
     // /. saveButton

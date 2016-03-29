@@ -239,6 +239,10 @@
                     <div id="editor-body" class="modal-body">
                     </div>
                     <!-- /. Modal Body -->
+                    <div class="modal-footer">
+                        <button id="cancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button id="saveButton" type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,7 +291,6 @@
         // load "Status and Control" form
         $('#editor-body').load('table-responsive.html');
 
-        var roomsNewReq =[]
         var t = $('#shading-table').DataTable( {
             responsive: true,
             select: {
@@ -307,7 +310,6 @@
                         for ( i=0; i<selectData.length; i++ ) {
                             var value = selectData[i];
                             roomsNewReq_temp.push(value[1]);
-                            //roomsNewReq = roomsNewReq_temp;
                         } // for loop
                         console.log(roomsNewReq_temp,'shading-tp');
                         if (roomsNewReq_temp.length != 0){

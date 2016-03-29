@@ -9,7 +9,7 @@ function pushUserInfo(information){
     
    // console.log ("PUSHUSERINFO" + information);
 
-    var i
+    var i;
     for (i = 1; i < 7; i++) {
 		$.ajax ({
 			    dataType:"json",
@@ -18,6 +18,6 @@ function pushUserInfo(information){
 			    }
 		});
 		console.log("Information[" + i + "] " + information[i]);
-		setTimeout(function() {}, 200);
+		
 	}
 }
