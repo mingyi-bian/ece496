@@ -59,7 +59,7 @@ $(document).ready(function() {
             }
 
 
-            //console.log("PUSH INFO" + pushInformation);   
+            console.log("save / " + pushInformation);   
             pushUserInfo(pushInformation);
 
 

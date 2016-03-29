@@ -98,8 +98,3 @@
 <!-- /.table-responsive -->
 
 
-<!-- Redis Database save-cancel-buttons -->
-<!-- <script src="../js/save-cancel-buttons.js"></script> -->
-
-<!-- /.table-responsive -->
-
