@@ -14,16 +14,12 @@ $(document).ready(function() {
 
     $('#saveButton').click(function() {
 
-
         var rooms = $('#roomTextbox').html().split(", ");
 
         for (i = 0; i < rooms.length; i++){
             var pushInformation = [];
             
             pushInformation.push(rooms[i]);
-
-
-            
 
             pushInformation.push($('#facingTextbox').html());
 
