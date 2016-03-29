@@ -354,9 +354,7 @@
     <script src="../js/morris-data.js"></script>
 
     <script>
-        Morris.Bar({
-        element: 'morris-bar-chart',
-        data: [{
+        var data = [{
             y: 'Jan',  a: 2950, b: 770
         }, {
             y: 'Feb',  a: 3049,  b: 610
@@ -380,7 +378,11 @@
             y: 'Nov',  a: 1945,  b: 584
         }, {
             y: 'Dec',  a: 2506,  b: 501
-        }],
+        }];
+
+        var barGraph = Morris.Bar({
+        element: 'morris-bar-chart',
+        data: data,
         xkey: 'y',
         ykeys: ['a', 'b'],
         labels: ['Gas (Ton)', 'Electric (Ton)', 'Other'],
