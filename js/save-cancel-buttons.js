@@ -14,6 +14,8 @@ $(document).ready(function() {
 
     $('#saveButton').click(function() {
 
+        var i;
+
         var rooms = $('#roomTextbox').html().split(", ");
 
         for (i = 0; i < rooms.length; i++){
@@ -55,6 +57,8 @@ $(document).ready(function() {
             else if($('#Tilt4').is(':checked')){
                 pushInformation.push("4");
             }
+
+
             //console.log("PUSH INFO" + pushInformation);   
             pushUserInfo(pushInformation);
 
